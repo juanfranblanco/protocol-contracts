@@ -18280,7 +18280,7 @@
     }
   },
   "schemaVersion": "3.4.5",
-  "updatedAt": "2022-10-03T17:47:10.707Z",
+  "updatedAt": "2022-10-05T06:10:06.797Z",
   "devdoc": {
     "details": "This contract is for creating proxy to access ERC1155Rarible token. The beacon should be initialized before call ERC1155RaribleFactoryC2 constructor.",
     "kind": "dev",

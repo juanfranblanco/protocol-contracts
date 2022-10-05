@@ -26,6 +26,12 @@ const dev = {
   minCliffPeriod: 0,
   minSlopePeriod: 0
 }
+const polygon_mainnet = {
+	token: "0xc7A6319f084b6716E1B7e5e5C890811aa9A416A7",
+  startingPointWeek: 120,
+  minCliffPeriod: 0,
+  minSlopePeriod: 0
+}
 const def = {
 	token: "0x0000000000000000000000000000000000000000",
   startingPointWeek: 0,
@@ -36,6 +42,7 @@ const def = {
 let settings = {
 	"default": def,
 	"rinkeby": rinkeby,
+	"polygon_mainnet": polygon_mainnet,
 	"mainnet": mainnet,
 	"goerli": goerli,
 	"dev": dev

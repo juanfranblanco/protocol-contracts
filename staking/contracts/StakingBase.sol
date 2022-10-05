@@ -15,7 +15,7 @@ abstract contract StakingBase is OwnableUpgradeable, IVotesUpgradeable {
     using SafeMathUpgradeable for uint;
     using LibBrokenLine for LibBrokenLine.BrokenLine;
 
-    uint256 constant public WEEK = 50400; //blocks one week = 50400, day = 7200
+    uint256 constant public WEEK = 252000; //blocks one week = 50400, day = 7200
     
     uint256 constant TWO_YEAR_WEEKS = 104;                  //two year weeks
 
