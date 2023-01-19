@@ -12,6 +12,7 @@ import "./ILocking.sol";
 contract Locking is ILocking, LockingBase, LockingRelock, LockingVotes {
     using SafeMathUpgradeable for uint;
     using LibBrokenLine for LibBrokenLine.BrokenLine;
+    using safeU64 for uint;
 
     function __Locking_init(IERC20Upgradeable _token, uint _startingPointWeek, uint _minCliffPeriod, uint _minSlopePeriod) external initializer {
         __LockingBase_init_unchained(_token, _startingPointWeek, _minCliffPeriod, _minSlopePeriod);
@@ -52,6 +53,7 @@ contract Locking is ILocking, LockingBase, LockingRelock, LockingVotes {
         // IVotesUpgradeable events
         emit DelegateChanged(account, address(0), _delegate);
         emit DelegateVotesChanged(_delegate, 0, accounts[_delegate].balance.actualValue(time));
+        revert();
         return counter;
     }
 
@@ -96,7 +98,8 @@ contract Locking is ILocking, LockingBase, LockingRelock, LockingVotes {
         uint time = roundTimestamp(getBlockNumber());
         accounts[_delegate].balance.update(time);
         (uint bias, uint slope, uint cliff) = accounts[_delegate].balance.remove(id, time);
-        LibBrokenLine.Line memory line = LibBrokenLine.Line(time, bias, slope);
+        //LibBrokenLine.Line memory line = LibBrokenLine.Line(time, bias, slope);
+        uint line = safeU64.create(time, bias, slope, 0);
         accounts[newDelegate].balance.update(time);
         accounts[newDelegate].balance.add(id, line, cliff);
         locks[id].delegate = newDelegate;
@@ -109,7 +112,7 @@ contract Locking is ILocking, LockingBase, LockingRelock, LockingVotes {
     }
 
     function totalSupply() external view returns (uint) {
-        if ((totalSupplyLine.initial.bias == 0) || (stopped)) {
+        if ((totalSupplyLine.initial.bias() == 0) || (stopped)) {
             return 0;
         }
         uint time = roundTimestamp(getBlockNumber());
@@ -117,7 +120,7 @@ contract Locking is ILocking, LockingBase, LockingRelock, LockingVotes {
     }
 
     function balanceOf(address account) external view returns (uint) {
-        if ((accounts[account].balance.initial.bias == 0) || (stopped)) {
+        if ((accounts[account].balance.initial.bias() == 0) || (stopped)) {
             return 0;
         }
         uint time = roundTimestamp(getBlockNumber());
@@ -135,7 +138,7 @@ contract Locking is ILocking, LockingBase, LockingRelock, LockingVotes {
             address _delegate = locks[id[i]].delegate;
             updateLines(account, _delegate, time);
             //save data Line before remove
-            LibBrokenLine.LineData memory lineData = accounts[account].locked.initiatedLines[id[i]];
+            uint lineData = accounts[account].locked.initiatedLines[id[i]];
             (uint residue,,) = accounts[account].locked.remove(id[i], time);
 
             accounts[account].amount = accounts[account].amount.sub(residue);

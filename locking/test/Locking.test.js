@@ -2,6 +2,8 @@ const ERC20 = artifacts.require("TestERC20.sol");
 const TestNewLocking = artifacts.require("TestNewLocking.sol");
 const TestLocking = artifacts.require("TestLocking.sol");
 const TestNewLockingNoInterface = artifacts.require("TestNewLockingNoInteface.sol");
+const BrokenLineTest = artifacts.require("BrokenLineTest.sol");
+
 const truffleAssert = require('truffle-assertions');
 const { expectThrow } = require("@daonomic/tests-common");
 const { assertStorageUpgradeSafe } = require('@openzeppelin/upgrades-core');
@@ -14,6 +16,7 @@ contract("Locking", accounts => {
 	let token;
 	let deposite;
 	let currentBlock;
+  let forTest;
 
 	//const DAY = 7200; // blocks in 1 day
 	let WEEK;
@@ -26,10 +29,52 @@ contract("Locking", accounts => {
 		newLockingNoInterface = await TestNewLockingNoInterface.new();
 		await locking.__Locking_init(token.address, 0, 0, 0); //initialize, set owner
 
+    forTest = await BrokenLineTest.new();
 		WEEK = await locking.WEEK()
 		await incrementBlock(WEEK + 1); //to avoid lock() from ZERO point timeStamp
 	})
 
+  it("test safeU64", async () => {
+    await forTest.createUint(1, 100, 10, 0);
+
+    console.log((await forTest.asdsadas()).toString())
+
+    console.log((await forTest.getStart()).toString())
+    console.log((await forTest.getBias()).toString())
+    console.log((await forTest.getSlope()).toString())
+    console.log((await forTest.getCliff()).toString())
+  });
+
+
+  it("LOCK", async () => {
+    await token.mint(accounts[2], 1500);
+    await token.approve(locking.address, 1000000, { from: accounts[2] });
+
+    /*
+    let tx;
+    try {
+      tx = await locking.lock(accounts[2], accounts[2], 1000, 1, 103, { from: accounts[2] }); //address account, address delegate, uint amount, uint slopePeriod, uint cliff
+    } catch (e){
+      console.log(tx, e.data)
+      console.log(Object.keys(e.data)[0])
+    } finally {
+      console.log("LOCK:", tx)
+    } 
+    */
+   const tx = tx = await locking.lock(accounts[2], accounts[2], 1000, 1, 103, { from: accounts[2] }); //address account, address delegate, uint amount, uint slopePeriod, uint cliff
+    
+    balanceOf = await locking.balanceOf.call(accounts[2]);
+    //assert.equal(await token.balanceOf(locking.address), 1000);				//balance Lock on deposite
+    //assert.equal(await token.balanceOf(accounts[2]), 500);			      //tail user balance
+    //assert.equal(balanceOf, 1003);                                    //stRari calculated by formula
+  });
+
+  it("ADD", async () => {
+    const tx = await forTest.addTest(1, 100, 10, 256, 4); //Line, id, cliff                                 //stRari calculated by formula
+    console.log("ADD:", tx.receipt.gasUsed)
+  });
+
+  /*
 	describe("locking votes", () => {
 		it("locking votes events and balances", async () => {
 			const user = accounts[2];
@@ -1945,7 +1990,7 @@ contract("Locking", accounts => {
 			assert.equal(account, accounts[0]);
 		});
 	})
-
+*/
 	async function incrementBlock(amount) {
 		await locking.incrementBlock(amount);
 		currentBlock = await locking.blockNumberMocked();

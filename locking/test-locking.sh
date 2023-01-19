@@ -6,4 +6,5 @@ truffle test \
         ./test/contracts/TestNewLocking.sol \
         ./test/contracts/TestLocking.sol \
         ./test/contracts/TestNewLockingNoInteface.sol \
-        --compile-all
+        ./test/contracts/BrokenLineTest.sol \
+        --debug
