@@ -16,6 +16,7 @@ library LibOrder {
         "Order(address maker,Asset makeAsset,address taker,Asset takeAsset,uint256 salt,uint256 start,uint256 end,bytes4 dataType,bytes data)Asset(AssetType assetType,uint256 value)AssetType(bytes4 assetClass,bytes data)"
     );
 
+
     bytes4 constant DEFAULT_ORDER_TYPE = 0xffffffff;
 
     struct Order {

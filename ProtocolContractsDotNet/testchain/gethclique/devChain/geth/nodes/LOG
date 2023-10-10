@@ -1,0 +1,8 @@
+=============== Oct 10, 2023 (BST) ===============
+16:11:48.658736 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+16:11:48.671251 db@open opening
+16:11:48.676780 version@stat F·[] S·0B[] Sc·[]
+16:11:48.679492 db@janitor F·2 G·0
+16:11:48.679492 db@open done T·8.2408ms
+17:02:06.841276 db@close closing
+17:02:06.841813 db@close done T·536.4µs

@@ -1,0 +1,13 @@
+C:\Users\SuperDev\Documents\Repos\protocol-contracts\ProtocolContractsDotNet\ProtocolContracts\bin\Debug\net6.0\ProtocolContracts.deps.json
+C:\Users\SuperDev\Documents\Repos\protocol-contracts\ProtocolContractsDotNet\ProtocolContracts\bin\Debug\net6.0\ProtocolContracts.dll
+C:\Users\SuperDev\Documents\Repos\protocol-contracts\ProtocolContractsDotNet\ProtocolContracts\bin\Debug\net6.0\ProtocolContracts.pdb
+C:\Users\SuperDev\Documents\Repos\protocol-contracts\ProtocolContractsDotNet\ProtocolContracts\obj\Debug\net6.0\ProtocolContracts.csproj.AssemblyReference.cache
+C:\Users\SuperDev\Documents\Repos\protocol-contracts\ProtocolContractsDotNet\ProtocolContracts\obj\Debug\net6.0\ProtocolContracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SuperDev\Documents\Repos\protocol-contracts\ProtocolContractsDotNet\ProtocolContracts\obj\Debug\net6.0\ProtocolContracts.AssemblyInfoInputs.cache
+C:\Users\SuperDev\Documents\Repos\protocol-contracts\ProtocolContractsDotNet\ProtocolContracts\obj\Debug\net6.0\ProtocolContracts.AssemblyInfo.cs
+C:\Users\SuperDev\Documents\Repos\protocol-contracts\ProtocolContractsDotNet\ProtocolContracts\obj\Debug\net6.0\ProtocolContracts.csproj.CoreCompileInputs.cache
+C:\Users\SuperDev\Documents\Repos\protocol-contracts\ProtocolContractsDotNet\ProtocolContracts\obj\Debug\net6.0\ProtocolContracts.sourcelink.json
+C:\Users\SuperDev\Documents\Repos\protocol-contracts\ProtocolContractsDotNet\ProtocolContracts\obj\Debug\net6.0\ProtocolContracts.dll
+C:\Users\SuperDev\Documents\Repos\protocol-contracts\ProtocolContractsDotNet\ProtocolContracts\obj\Debug\net6.0\refint\ProtocolContracts.dll
+C:\Users\SuperDev\Documents\Repos\protocol-contracts\ProtocolContractsDotNet\ProtocolContracts\obj\Debug\net6.0\ProtocolContracts.pdb
+C:\Users\SuperDev\Documents\Repos\protocol-contracts\ProtocolContractsDotNet\ProtocolContracts\obj\Debug\net6.0\ref\ProtocolContracts.dll

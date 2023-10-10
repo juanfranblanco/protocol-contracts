@@ -1,5 +1,4 @@
 // SPDX-License-Identifier: MIT
-
 pragma solidity 0.7.6;
 
 import "./libraries/LibOrder.sol";
@@ -15,7 +14,7 @@ abstract contract OrderValidator is Initializable, ContextUpgradeable, EIP712Upg
     using LibSignature for bytes32;
     using AddressUpgradeable for address;
     
-    bytes4 constant internal MAGICVALUE = 0x1626ba7e;
+     bytes4 constant internal MAGICVALUE = 0x1626ba7e;
 
     function __OrderValidator_init_unchained() internal initializer {
         __EIP712_init_unchained("Exchange", "2");

@@ -32,6 +32,10 @@ contract LibOrderTest {
             ));
     }
 
+    function hash(LibOrder.Order calldata order) public pure returns(bytes32){
+        return LibOrder.hash(order);
+    }
+
     function hashV1(address maker, LibAsset.Asset memory makeAsset, LibAsset.Asset memory takeAsset, uint salt) public pure returns(bytes32){
         return keccak256(abi.encode(
                 maker,

@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = Nethereum.XUnitEthereumClients
+build_property.ProjectDir = c:\Users\SuperDev\Documents\Repos\protocol-contracts\ProtocolContractsDotNet\Nethereum.XUnitEthereumClients\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

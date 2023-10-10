@@ -1,0 +1,2686 @@
+{
+    "contractName": "LibOrderTest",
+    "abi": [
+        {
+            "inputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "address",
+                            "name": "maker",
+                            "type": "address"
+                        },
+                        {
+                            "components": [
+                                {
+                                    "components": [
+                                        {
+                                            "internalType": "bytes4",
+                                            "name": "assetClass",
+                                            "type": "bytes4"
+                                        },
+                                        {
+                                            "internalType": "bytes",
+                                            "name": "data",
+                                            "type": "bytes"
+                                        }
+                                    ],
+                                    "internalType": "struct LibAsset.AssetType",
+                                    "name": "assetType",
+                                    "type": "tuple"
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "value",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "internalType": "struct LibAsset.Asset",
+                            "name": "makeAsset",
+                            "type": "tuple"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "taker",
+                            "type": "address"
+                        },
+                        {
+                            "components": [
+                                {
+                                    "components": [
+                                        {
+                                            "internalType": "bytes4",
+                                            "name": "assetClass",
+                                            "type": "bytes4"
+                                        },
+                                        {
+                                            "internalType": "bytes",
+                                            "name": "data",
+                                            "type": "bytes"
+                                        }
+                                    ],
+                                    "internalType": "struct LibAsset.AssetType",
+                                    "name": "assetType",
+                                    "type": "tuple"
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "value",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "internalType": "struct LibAsset.Asset",
+                            "name": "takeAsset",
+                            "type": "tuple"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "salt",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "start",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "end",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "bytes4",
+                            "name": "dataType",
+                            "type": "bytes4"
+                        },
+                        {
+                            "internalType": "bytes",
+                            "name": "data",
+                            "type": "bytes"
+                        }
+                    ],
+                    "internalType": "struct LibOrder.Order",
+                    "name": "order",
+                    "type": "tuple"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "fill",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "bool",
+                    "name": "isMakeFill",
+                    "type": "bool"
+                }
+            ],
+            "name": "calculateRemaining",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "makeAmount",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "takeAmount",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "pure",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "address",
+                            "name": "maker",
+                            "type": "address"
+                        },
+                        {
+                            "components": [
+                                {
+                                    "components": [
+                                        {
+                                            "internalType": "bytes4",
+                                            "name": "assetClass",
+                                            "type": "bytes4"
+                                        },
+                                        {
+                                            "internalType": "bytes",
+                                            "name": "data",
+                                            "type": "bytes"
+                                        }
+                                    ],
+                                    "internalType": "struct LibAsset.AssetType",
+                                    "name": "assetType",
+                                    "type": "tuple"
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "value",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "internalType": "struct LibAsset.Asset",
+                            "name": "makeAsset",
+                            "type": "tuple"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "taker",
+                            "type": "address"
+                        },
+                        {
+                            "components": [
+                                {
+                                    "components": [
+                                        {
+                                            "internalType": "bytes4",
+                                            "name": "assetClass",
+                                            "type": "bytes4"
+                                        },
+                                        {
+                                            "internalType": "bytes",
+                                            "name": "data",
+                                            "type": "bytes"
+                                        }
+                                    ],
+                                    "internalType": "struct LibAsset.AssetType",
+                                    "name": "assetType",
+                                    "type": "tuple"
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "value",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "internalType": "struct LibAsset.Asset",
+                            "name": "takeAsset",
+                            "type": "tuple"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "salt",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "start",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "end",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "bytes4",
+                            "name": "dataType",
+                            "type": "bytes4"
+                        },
+                        {
+                            "internalType": "bytes",
+                            "name": "data",
+                            "type": "bytes"
+                        }
+                    ],
+                    "internalType": "struct LibOrder.Order",
+                    "name": "order",
+                    "type": "tuple"
+                }
+            ],
+            "name": "hash",
+            "outputs": [
+                {
+                    "internalType": "bytes32",
+                    "name": "",
+                    "type": "bytes32"
+                }
+            ],
+            "stateMutability": "pure",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "address",
+                            "name": "maker",
+                            "type": "address"
+                        },
+                        {
+                            "components": [
+                                {
+                                    "components": [
+                                        {
+                                            "internalType": "bytes4",
+                                            "name": "assetClass",
+                                            "type": "bytes4"
+                                        },
+                                        {
+                                            "internalType": "bytes",
+                                            "name": "data",
+                                            "type": "bytes"
+                                        }
+                                    ],
+                                    "internalType": "struct LibAsset.AssetType",
+                                    "name": "assetType",
+                                    "type": "tuple"
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "value",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "internalType": "struct LibAsset.Asset",
+                            "name": "makeAsset",
+                            "type": "tuple"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "taker",
+                            "type": "address"
+                        },
+                        {
+                            "components": [
+                                {
+                                    "components": [
+                                        {
+                                            "internalType": "bytes4",
+                                            "name": "assetClass",
+                                            "type": "bytes4"
+                                        },
+                                        {
+                                            "internalType": "bytes",
+                                            "name": "data",
+                                            "type": "bytes"
+                                        }
+                                    ],
+                                    "internalType": "struct LibAsset.AssetType",
+                                    "name": "assetType",
+                                    "type": "tuple"
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "value",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "internalType": "struct LibAsset.Asset",
+                            "name": "takeAsset",
+                            "type": "tuple"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "salt",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "start",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "end",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "bytes4",
+                            "name": "dataType",
+                            "type": "bytes4"
+                        },
+                        {
+                            "internalType": "bytes",
+                            "name": "data",
+                            "type": "bytes"
+                        }
+                    ],
+                    "internalType": "struct LibOrder.Order",
+                    "name": "order",
+                    "type": "tuple"
+                }
+            ],
+            "name": "hashKey",
+            "outputs": [
+                {
+                    "internalType": "bytes32",
+                    "name": "",
+                    "type": "bytes32"
+                }
+            ],
+            "stateMutability": "pure",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "address",
+                            "name": "maker",
+                            "type": "address"
+                        },
+                        {
+                            "components": [
+                                {
+                                    "components": [
+                                        {
+                                            "internalType": "bytes4",
+                                            "name": "assetClass",
+                                            "type": "bytes4"
+                                        },
+                                        {
+                                            "internalType": "bytes",
+                                            "name": "data",
+                                            "type": "bytes"
+                                        }
+                                    ],
+                                    "internalType": "struct LibAsset.AssetType",
+                                    "name": "assetType",
+                                    "type": "tuple"
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "value",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "internalType": "struct LibAsset.Asset",
+                            "name": "makeAsset",
+                            "type": "tuple"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "taker",
+                            "type": "address"
+                        },
+                        {
+                            "components": [
+                                {
+                                    "components": [
+                                        {
+                                            "internalType": "bytes4",
+                                            "name": "assetClass",
+                                            "type": "bytes4"
+                                        },
+                                        {
+                                            "internalType": "bytes",
+                                            "name": "data",
+                                            "type": "bytes"
+                                        }
+                                    ],
+                                    "internalType": "struct LibAsset.AssetType",
+                                    "name": "assetType",
+                                    "type": "tuple"
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "value",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "internalType": "struct LibAsset.Asset",
+                            "name": "takeAsset",
+                            "type": "tuple"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "salt",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "start",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "end",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "bytes4",
+                            "name": "dataType",
+                            "type": "bytes4"
+                        },
+                        {
+                            "internalType": "bytes",
+                            "name": "data",
+                            "type": "bytes"
+                        }
+                    ],
+                    "internalType": "struct LibOrder.Order",
+                    "name": "order",
+                    "type": "tuple"
+                }
+            ],
+            "name": "hashKeyOnChain",
+            "outputs": [
+                {
+                    "internalType": "bytes32",
+                    "name": "",
+                    "type": "bytes32"
+                }
+            ],
+            "stateMutability": "pure",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "maker",
+                    "type": "address"
+                },
+                {
+                    "components": [
+                        {
+                            "components": [
+                                {
+                                    "internalType": "bytes4",
+                                    "name": "assetClass",
+                                    "type": "bytes4"
+                                },
+                                {
+                                    "internalType": "bytes",
+                                    "name": "data",
+                                    "type": "bytes"
+                                }
+                            ],
+                            "internalType": "struct LibAsset.AssetType",
+                            "name": "assetType",
+                            "type": "tuple"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "value",
+                            "type": "uint256"
+                        }
+                    ],
+                    "internalType": "struct LibAsset.Asset",
+                    "name": "makeAsset",
+                    "type": "tuple"
+                },
+                {
+                    "components": [
+                        {
+                            "components": [
+                                {
+                                    "internalType": "bytes4",
+                                    "name": "assetClass",
+                                    "type": "bytes4"
+                                },
+                                {
+                                    "internalType": "bytes",
+                                    "name": "data",
+                                    "type": "bytes"
+                                }
+                            ],
+                            "internalType": "struct LibAsset.AssetType",
+                            "name": "assetType",
+                            "type": "tuple"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "value",
+                            "type": "uint256"
+                        }
+                    ],
+                    "internalType": "struct LibAsset.Asset",
+                    "name": "takeAsset",
+                    "type": "tuple"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "salt",
+                    "type": "uint256"
+                }
+            ],
+            "name": "hashV1",
+            "outputs": [
+                {
+                    "internalType": "bytes32",
+                    "name": "",
+                    "type": "bytes32"
+                }
+            ],
+            "stateMutability": "pure",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "maker",
+                    "type": "address"
+                },
+                {
+                    "components": [
+                        {
+                            "components": [
+                                {
+                                    "internalType": "bytes4",
+                                    "name": "assetClass",
+                                    "type": "bytes4"
+                                },
+                                {
+                                    "internalType": "bytes",
+                                    "name": "data",
+                                    "type": "bytes"
+                                }
+                            ],
+                            "internalType": "struct LibAsset.AssetType",
+                            "name": "assetType",
+                            "type": "tuple"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "value",
+                            "type": "uint256"
+                        }
+                    ],
+                    "internalType": "struct LibAsset.Asset",
+                    "name": "makeAsset",
+                    "type": "tuple"
+                },
+                {
+                    "components": [
+                        {
+                            "components": [
+                                {
+                                    "internalType": "bytes4",
+                                    "name": "assetClass",
+                                    "type": "bytes4"
+                                },
+                                {
+                                    "internalType": "bytes",
+                                    "name": "data",
+                                    "type": "bytes"
+                                }
+                            ],
+                            "internalType": "struct LibAsset.AssetType",
+                            "name": "assetType",
+                            "type": "tuple"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "value",
+                            "type": "uint256"
+                        }
+                    ],
+                    "internalType": "struct LibAsset.Asset",
+                    "name": "takeAsset",
+                    "type": "tuple"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "salt",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "bytes",
+                    "name": "data",
+                    "type": "bytes"
+                }
+            ],
+            "name": "hashV2",
+            "outputs": [
+                {
+                    "internalType": "bytes32",
+                    "name": "",
+                    "type": "bytes32"
+                }
+            ],
+            "stateMutability": "pure",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "address",
+                            "name": "maker",
+                            "type": "address"
+                        },
+                        {
+                            "components": [
+                                {
+                                    "components": [
+                                        {
+                                            "internalType": "bytes4",
+                                            "name": "assetClass",
+                                            "type": "bytes4"
+                                        },
+                                        {
+                                            "internalType": "bytes",
+                                            "name": "data",
+                                            "type": "bytes"
+                                        }
+                                    ],
+                                    "internalType": "struct LibAsset.AssetType",
+                                    "name": "assetType",
+                                    "type": "tuple"
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "value",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "internalType": "struct LibAsset.Asset",
+                            "name": "makeAsset",
+                            "type": "tuple"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "taker",
+                            "type": "address"
+                        },
+                        {
+                            "components": [
+                                {
+                                    "components": [
+                                        {
+                                            "internalType": "bytes4",
+                                            "name": "assetClass",
+                                            "type": "bytes4"
+                                        },
+                                        {
+                                            "internalType": "bytes",
+                                            "name": "data",
+                                            "type": "bytes"
+                                        }
+                                    ],
+                                    "internalType": "struct LibAsset.AssetType",
+                                    "name": "assetType",
+                                    "type": "tuple"
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "value",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "internalType": "struct LibAsset.Asset",
+                            "name": "takeAsset",
+                            "type": "tuple"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "salt",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "start",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "end",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "bytes4",
+                            "name": "dataType",
+                            "type": "bytes4"
+                        },
+                        {
+                            "internalType": "bytes",
+                            "name": "data",
+                            "type": "bytes"
+                        }
+                    ],
+                    "internalType": "struct LibOrder.Order",
+                    "name": "order",
+                    "type": "tuple"
+                }
+            ],
+            "name": "validate",
+            "outputs": [],
+            "stateMutability": "view",
+            "type": "function"
+        }
+    ],
+    "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"maker\",\"type\":\"address\"},{\"components\":[{\"components\":[{\"internalType\":\"bytes4\",\"name\":\"assetClass\",\"type\":\"bytes4\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct LibAsset.AssetType\",\"name\":\"assetType\",\"type\":\"tuple\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"internalType\":\"struct LibAsset.Asset\",\"name\":\"makeAsset\",\"type\":\"tuple\"},{\"internalType\":\"address\",\"name\":\"taker\",\"type\":\"address\"},{\"components\":[{\"components\":[{\"internalType\":\"bytes4\",\"name\":\"assetClass\",\"type\":\"bytes4\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct LibAsset.AssetType\",\"name\":\"assetType\",\"type\":\"tuple\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"internalType\":\"struct LibAsset.Asset\",\"name\":\"takeAsset\",\"type\":\"tuple\"},{\"internalType\":\"uint256\",\"name\":\"salt\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"start\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"end\",\"type\":\"uint256\"},{\"internalType\":\"bytes4\",\"name\":\"dataType\",\"type\":\"bytes4\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct LibOrder.Order\",\"name\":\"order\",\"type\":\"tuple\"},{\"internalType\":\"uint256\",\"name\":\"fill\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"isMakeFill\",\"type\":\"bool\"}],\"name\":\"calculateRemaining\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"makeAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"takeAmount\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"maker\",\"type\":\"address\"},{\"components\":[{\"components\":[{\"internalType\":\"bytes4\",\"name\":\"assetClass\",\"type\":\"bytes4\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct LibAsset.AssetType\",\"name\":\"assetType\",\"type\":\"tuple\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"internalType\":\"struct LibAsset.Asset\",\"name\":\"makeAsset\",\"type\":\"tuple\"},{\"internalType\":\"address\",\"name\":\"taker\",\"type\":\"address\"},{\"components\":[{\"components\":[{\"internalType\":\"bytes4\",\"name\":\"assetClass\",\"type\":\"bytes4\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct LibAsset.AssetType\",\"name\":\"assetType\",\"type\":\"tuple\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"internalType\":\"struct LibAsset.Asset\",\"name\":\"takeAsset\",\"type\":\"tuple\"},{\"internalType\":\"uint256\",\"name\":\"salt\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"start\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"end\",\"type\":\"uint256\"},{\"internalType\":\"bytes4\",\"name\":\"dataType\",\"type\":\"bytes4\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct LibOrder.Order\",\"name\":\"order\",\"type\":\"tuple\"}],\"name\":\"hash\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"maker\",\"type\":\"address\"},{\"components\":[{\"components\":[{\"internalType\":\"bytes4\",\"name\":\"assetClass\",\"type\":\"bytes4\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct LibAsset.AssetType\",\"name\":\"assetType\",\"type\":\"tuple\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"internalType\":\"struct LibAsset.Asset\",\"name\":\"makeAsset\",\"type\":\"tuple\"},{\"internalType\":\"address\",\"name\":\"taker\",\"type\":\"address\"},{\"components\":[{\"components\":[{\"internalType\":\"bytes4\",\"name\":\"assetClass\",\"type\":\"bytes4\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct LibAsset.AssetType\",\"name\":\"assetType\",\"type\":\"tuple\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"internalType\":\"struct LibAsset.Asset\",\"name\":\"takeAsset\",\"type\":\"tuple\"},{\"internalType\":\"uint256\",\"name\":\"salt\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"start\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"end\",\"type\":\"uint256\"},{\"internalType\":\"bytes4\",\"name\":\"dataType\",\"type\":\"bytes4\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct LibOrder.Order\",\"name\":\"order\",\"type\":\"tuple\"}],\"name\":\"hashKey\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"maker\",\"type\":\"address\"},{\"components\":[{\"components\":[{\"internalType\":\"bytes4\",\"name\":\"assetClass\",\"type\":\"bytes4\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct LibAsset.AssetType\",\"name\":\"assetType\",\"type\":\"tuple\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"internalType\":\"struct LibAsset.Asset\",\"name\":\"makeAsset\",\"type\":\"tuple\"},{\"internalType\":\"address\",\"name\":\"taker\",\"type\":\"address\"},{\"components\":[{\"components\":[{\"internalType\":\"bytes4\",\"name\":\"assetClass\",\"type\":\"bytes4\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct LibAsset.AssetType\",\"name\":\"assetType\",\"type\":\"tuple\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"internalType\":\"struct LibAsset.Asset\",\"name\":\"takeAsset\",\"type\":\"tuple\"},{\"internalType\":\"uint256\",\"name\":\"salt\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"start\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"end\",\"type\":\"uint256\"},{\"internalType\":\"bytes4\",\"name\":\"dataType\",\"type\":\"bytes4\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct LibOrder.Order\",\"name\":\"order\",\"type\":\"tuple\"}],\"name\":\"hashKeyOnChain\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"maker\",\"type\":\"address\"},{\"components\":[{\"components\":[{\"internalType\":\"bytes4\",\"name\":\"assetClass\",\"type\":\"bytes4\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct LibAsset.AssetType\",\"name\":\"assetType\",\"type\":\"tuple\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"internalType\":\"struct LibAsset.Asset\",\"name\":\"makeAsset\",\"type\":\"tuple\"},{\"components\":[{\"components\":[{\"internalType\":\"bytes4\",\"name\":\"assetClass\",\"type\":\"bytes4\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct LibAsset.AssetType\",\"name\":\"assetType\",\"type\":\"tuple\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"internalType\":\"struct LibAsset.Asset\",\"name\":\"takeAsset\",\"type\":\"tuple\"},{\"internalType\":\"uint256\",\"name\":\"salt\",\"type\":\"uint256\"}],\"name\":\"hashV1\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"maker\",\"type\":\"address\"},{\"components\":[{\"components\":[{\"internalType\":\"bytes4\",\"name\":\"assetClass\",\"type\":\"bytes4\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct LibAsset.AssetType\",\"name\":\"assetType\",\"type\":\"tuple\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"internalType\":\"struct LibAsset.Asset\",\"name\":\"makeAsset\",\"type\":\"tuple\"},{\"components\":[{\"components\":[{\"internalType\":\"bytes4\",\"name\":\"assetClass\",\"type\":\"bytes4\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct LibAsset.AssetType\",\"name\":\"assetType\",\"type\":\"tuple\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"internalType\":\"struct LibAsset.Asset\",\"name\":\"takeAsset\",\"type\":\"tuple\"},{\"internalType\":\"uint256\",\"name\":\"salt\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"hashV2\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"maker\",\"type\":\"address\"},{\"components\":[{\"components\":[{\"internalType\":\"bytes4\",\"name\":\"assetClass\",\"type\":\"bytes4\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct LibAsset.AssetType\",\"name\":\"assetType\",\"type\":\"tuple\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"internalType\":\"struct LibAsset.Asset\",\"name\":\"makeAsset\",\"type\":\"tuple\"},{\"internalType\":\"address\",\"name\":\"taker\",\"type\":\"address\"},{\"components\":[{\"components\":[{\"internalType\":\"bytes4\",\"name\":\"assetClass\",\"type\":\"bytes4\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct LibAsset.AssetType\",\"name\":\"assetType\",\"type\":\"tuple\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"internalType\":\"struct LibAsset.Asset\",\"name\":\"takeAsset\",\"type\":\"tuple\"},{\"internalType\":\"uint256\",\"name\":\"salt\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"start\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"end\",\"type\":\"uint256\"},{\"internalType\":\"bytes4\",\"name\":\"dataType\",\"type\":\"bytes4\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct LibOrder.Order\",\"name\":\"order\",\"type\":\"tuple\"}],\"name\":\"validate\",\"outputs\":[],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"c:/Users/SuperDev/Documents/Repos/protocol-contracts/exchange-v2/test/contracts/LibOrderTest.sol\":\"LibOrderTest\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"c:/Users/SuperDev/Documents/Repos/protocol-contracts/exchange-v2/contracts/libraries/LibMath.sol\":{\"keccak256\":\"0xba61f9827119f768dc87b92af1543104a972fd6cd059634832a0c5fadb19cc6f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d6ee1d9fdd134f661a1f349835946595b0badc3aff860ba4cf0ed0b073183b06\",\"dweb:/ipfs/QmaCvLiebg8w2LjFnuJNo5p5PMsdCvJ83sVFFuBkmFdBL7\"]},\"c:/Users/SuperDev/Documents/Repos/protocol-contracts/exchange-v2/contracts/libraries/LibOrder.sol\":{\"keccak256\":\"0xc939c9557cfe3988141a4d81b3babc4c20763a6131b4a826a3c62819f22070a6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://33eab2b5bcfe548e88d5170398ac8cc58772cf75ccdcbd6e88a16924aef8b7dc\",\"dweb:/ipfs/QmUmPiW7cWbBZADB5oBnYevk8ENMAfWf7NuTMpy5TWBsxo\"]},\"c:/Users/SuperDev/Documents/Repos/protocol-contracts/exchange-v2/contracts/libraries/LibOrderDataV1.sol\":{\"keccak256\":\"0x82ad02b7895a42533db63a893361bd93a86359beda2a14e3efa387d4b49a9aba\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a855fa0779c21ffc3ffc435429d81780ae905cbfb731b9da6f38c2eeb7ff2bf6\",\"dweb:/ipfs/QmetfUiz1MBZBGkbK9HvYzkrP4jUJxMzp4Ga6fbBFKAFNk\"]},\"c:/Users/SuperDev/Documents/Repos/protocol-contracts/exchange-v2/contracts/libraries/LibOrderDataV2.sol\":{\"keccak256\":\"0xbea986724c049d915a44b77474344821e869ed8f46bfb0fd3800fbb331eb1f8c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ebd0b2fac5a9e19e2139470d01ea5c87fb82217a160a9efd8d999d27cf563ace\",\"dweb:/ipfs/QmWaotmzSoqUDuj8aS48DvkR2g6ZiBXqoBUGcKQ9FvCCaX\"]},\"c:/Users/SuperDev/Documents/Repos/protocol-contracts/exchange-v2/contracts/libraries/LibOrderDataV3.sol\":{\"keccak256\":\"0xf635b7a87b91c93a0f6480e2bec29228a9e1a6558b5141bf0e6b3116e1afec5c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://771c4cc5d6a992fc1934107a4929d15982a91e8cccf56579f57554a89df513fd\",\"dweb:/ipfs/QmWsXK2c6YxPw1eQBYr49qFFPwYNTUqTh6G1FumFszm6we\"]},\"c:/Users/SuperDev/Documents/Repos/protocol-contracts/exchange-v2/test/contracts/LibOrderTest.sol\":{\"keccak256\":\"0x7104596f6169105d8e0a462b1d389966fa8c6c83bfb4b5ac66f7e8892072fe8d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6011afa98be94c458c9c65b03539236b3c9388234a09eeb924704fa31d013d15\",\"dweb:/ipfs/QmP5gv5A5VPBhzEKiCrSj46UUUb1quUfRbSWrSZPjBbUfx\"]},\"c:/Users/SuperDev/Documents/Repos/protocol-contracts/node_modules/@openzeppelin/contracts-upgradeable/math/SafeMathUpgradeable.sol\":{\"keccak256\":\"0x0dd1e9b19801e3e7d900fbf4182d81e1afd23ad7be39504e33df6bbcba91d724\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5e30d594df25d0651c2cd6f85d856e5fc9f3dbae68d017e1da33eb3c7e2f1ecc\",\"dweb:/ipfs/QmPgkV99jZr3Zs9ex8dJ5j22oX4wDuDtMCnXNy67bTwgAB\"]},\"c:/Users/SuperDev/Documents/Repos/protocol-contracts/node_modules/@rarible/lib-asset/contracts/LibAsset.sol\":{\"keccak256\":\"0x807c7f847e26b1e616147b0ca597b0d8ed547bac4977dda2885be725e1906140\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8478b9a453a5083e09e7af9debef28132f6f404f5b3bdcf6c9122d3730bdf1e5\",\"dweb:/ipfs/QmQVfBEsMnHbB71FaevSpVq1MC1VTaP1kh3YDbRTiREYUn\"]},\"c:/Users/SuperDev/Documents/Repos/protocol-contracts/node_modules/@rarible/lib-part/contracts/LibPart.sol\":{\"keccak256\":\"0x1df0a6d9b769ed63f977d56ac76ac8d1eac435c4256054beb8c67c96486514af\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fa9b69331714414839affded93b9d8e6c2368621b729db6f0de59b36d62cf744\",\"dweb:/ipfs/QmeH2YpMNs9C6CB8GugZkWnPTaQJAT3TS6NB4yBDwJcYTc\"]}},\"version\":1}",
+    "bytecode": "608060405234801561001057600080fd5b50610def806100206000396000f3fe608060405234801561001057600080fd5b506004361061007d5760003560e01c8063475f4e4e1161005b578063475f4e4e146100d15780634fa8d605146100f257806387774dd914610105578063bcba5fb0146100825761007d565b8063058dbeef1461008257806327c4ea47146100ab578063384a6c9d146100be575b600080fd5b610095610090366004610b46565b61011a565b6040516100a29190610c74565b60405180910390f35b6100956100b9366004610a2e565b610135565b6100956100cc366004610b46565b610184565b6100e46100df366004610b79565b610197565b6040516100a2929190610c7d565b610095610100366004610aa7565b6101ba565b610118610113366004610b46565b61020c565b005b600061012d61012883610caf565b610220565b90505b919050565b60008461014585600001516103a8565b8451610150906103a8565b846040516020016101649493929190610bd6565b604051602081830303815290604052805190602001209050949350505050565b600061012d61019283610caf565b610412565b6000806101ad6101a686610caf565b8585610502565b915091505b935093915050565b6000856101ca86600001516103a8565b85516101d5906103a8565b85856040516020016101eb959493929190610bfc565b60405160208183030381529060405280519060200120905095945050505050565b61021d61021882610caf565b61057b565b50565b60e08101516000906001600160e01b031916632611a13360e11b1480610254575060e08201516001600160e01b0319908116145b156102c957815160208301515161026a906103a8565b606084015151610279906103a8565b846080015160405160200180856001600160a01b03168152602001848152602001838152602001828152602001945050505050604051602081830303815290604052805190602001209050610130565b81516020830151516102da906103a8565b6060840151516102e9906103a8565b846080015185610100015160405160200180866001600160a01b0316815260200185815260200184815260200183815260200180602001828103825283818151815260200191508051906020019080838360005b8381101561035557818101518382015260200161033d565b50505050905090810190601f1680156103825780820380516001836020036101000a031916815260200191505b509650505050505050604051602081830303815290604052805190602001209050610130565b8051602091820151805190830120604080517f452a0dc408cb0d27ffc3b3caff933a5208040a53a9dbecd8d89cad2c0d40e00c818601526001600160e01b031990931683820152606080840192909252805180840390920182526080909201909152805191012090565b60007f477ed43b8020849b755512278536c3766a3b4ab547519949a75f483372493f8d82600001516104478460200151610645565b84604001516104598660600151610645565b86608001518760a001518860c001518960e001518a610100015180519060200120604051602001808b81526020018a6001600160a01b03168152602001898152602001886001600160a01b03168152602001878152602001868152602001858152602001848152602001836001600160e01b03191681526020018281526020019a5050505050505050505050604051602081830303815290604052805190602001209050919050565b600080821561054157602080860151015161051d90856106b5565b915061053a85606001516020015186602001516020015184610717565b90506101b2565b60608501516020015161055490856106b5565b905061057185602001516020015186606001516020015183610717565b9150935093915050565b60a0810151158061058f5750428160a00151105b6105e0576040805162461bcd60e51b815260206004820152601d60248201527f4f726465722073746172742076616c69646174696f6e206661696c6564000000604482015290519081900360640190fd5b60c081015115806105f45750428160c00151115b61021d576040805162461bcd60e51b815260206004820152601b60248201527f4f7264657220656e642076616c69646174696f6e206661696c65640000000000604482015290519081900360640190fd5b60007fdb6f72e915676cfc289da13bc4ece054fd17b1df6d77ffc4a60510718c236b0861067583600001516103a8565b8360200151604051602001808481526020018381526020018281526020019350505050604051602081830303815290604052805190602001209050919050565b60008282111561070c576040805162461bcd60e51b815260206004820152601e60248201527f536166654d6174683a207375627472616374696f6e206f766572666c6f770000604482015290519081900360640190fd5b508082035b92915050565b6000610724848484610783565b15610767576040805162461bcd60e51b815260206004820152600e60248201526d3937bab73234b7339032b93937b960911b604482015290519081900360640190fd5b61077b836107758685610814565b9061086d565b949350505050565b6000826107ca576040805162461bcd60e51b815260206004820152601060248201526f6469766973696f6e206279207a65726f60801b604482015290519081900360640190fd5b8115806107d5575083155b156107e25750600061080d565b600083806107ec57fe5b85840990506107fb8584610814565b610807826103e8610814565b10159150505b9392505050565b60008261082357506000610711565b8282028284828161083057fe5b041461080d5760405162461bcd60e51b8152600401808060200182810382526021815260200180610d996021913960400191505060405180910390fd5b60008082116108c3576040805162461bcd60e51b815260206004820152601a60248201527f536166654d6174683a206469766973696f6e206279207a65726f000000000000604482015290519081900360640190fd5b8183816108cc57fe5b049392505050565b80356001600160a01b038116811461013057600080fd5b80356001600160e01b03198116811461013057600080fd5b600082601f830112610913578081fd5b813567ffffffffffffffff81111561092757fe5b61093a601f8201601f1916602001610c8b565b81815284602083860101111561094e578283fd5b816020850160208301379081016020019190915292915050565b6000604080838503121561097a578182fd5b805181810167ffffffffffffffff828210818311171561099657fe5b8184528294508535818111156109ab57600080fd5b86018088038513156109bc57600080fd5b6080840183811083821117156109ce57fe5b85526109d9816108eb565b835260208101359450818511156109ef57600080fd5b6109fb88868301610903565b60608501525050815260209384013593019290925292915050565b60006101208284031215610a28578081fd5b50919050565b60008060008060808587031215610a43578384fd5b610a4c856108d4565b9350602085013567ffffffffffffffff80821115610a68578485fd5b610a7488838901610968565b94506040870135915080821115610a89578384fd5b50610a9687828801610968565b949793965093946060013593505050565b600080600080600060a08688031215610abe578081fd5b610ac7866108d4565b9450602086013567ffffffffffffffff80821115610ae3578283fd5b610aef89838a01610968565b95506040880135915080821115610b04578283fd5b610b1089838a01610968565b9450606088013593506080880135915080821115610b2c578283fd5b50610b3988828901610903565b9150509295509295909350565b600060208284031215610b57578081fd5b813567ffffffffffffffff811115610b6d578182fd5b61077b84828501610a16565b600080600060608486031215610b8d578283fd5b833567ffffffffffffffff811115610ba3578384fd5b610baf86828701610a16565b9350506020840135915060408401358015158114610bcb578182fd5b809150509250925092565b6001600160a01b0394909416845260208401929092526040830152606082015260800190565b600060018060a01b03871682526020868184015285604084015284606084015260a0608084015283518060a0850152825b81811015610c495785810183015185820160c001528201610c2d565b81811115610c5a578360c083870101525b50601f01601f19169290920160c001979650505050505050565b90815260200190565b918252602082015260400190565b60405181810167ffffffffffffffff81118282101715610ca757fe5b604052919050565b6000610120808336031215610cc2578182fd5b610ccb81610c8b565b9050610cd6836108d4565b8152602083013567ffffffffffffffff80821115610cf2578384fd5b610cfe36838701610968565b6020840152610d0f604086016108d4565b60408401526060850135915080821115610d27578384fd5b610d3336838701610968565b60608401526080850135608084015260a085013560a084015260c085013560c0840152610d6260e086016108eb565b60e084015261010091508185013581811115610d7c578485fd5b610d8836828801610903565b838501525050508091505091905056fe536166654d6174683a206d756c7469706c69636174696f6e206f766572666c6f77a2646970667358221220e6ca1435862dc9d791f99e820a13bd34613bc27ea9f074d1d40f2818ad40d32564736f6c63430007060033",
+    "deployedBytecode": "608060405234801561001057600080fd5b506004361061007d5760003560e01c8063475f4e4e1161005b578063475f4e4e146100d15780634fa8d605146100f257806387774dd914610105578063bcba5fb0146100825761007d565b8063058dbeef1461008257806327c4ea47146100ab578063384a6c9d146100be575b600080fd5b610095610090366004610b46565b61011a565b6040516100a29190610c74565b60405180910390f35b6100956100b9366004610a2e565b610135565b6100956100cc366004610b46565b610184565b6100e46100df366004610b79565b610197565b6040516100a2929190610c7d565b610095610100366004610aa7565b6101ba565b610118610113366004610b46565b61020c565b005b600061012d61012883610caf565b610220565b90505b919050565b60008461014585600001516103a8565b8451610150906103a8565b846040516020016101649493929190610bd6565b604051602081830303815290604052805190602001209050949350505050565b600061012d61019283610caf565b610412565b6000806101ad6101a686610caf565b8585610502565b915091505b935093915050565b6000856101ca86600001516103a8565b85516101d5906103a8565b85856040516020016101eb959493929190610bfc565b60405160208183030381529060405280519060200120905095945050505050565b61021d61021882610caf565b61057b565b50565b60e08101516000906001600160e01b031916632611a13360e11b1480610254575060e08201516001600160e01b0319908116145b156102c957815160208301515161026a906103a8565b606084015151610279906103a8565b846080015160405160200180856001600160a01b03168152602001848152602001838152602001828152602001945050505050604051602081830303815290604052805190602001209050610130565b81516020830151516102da906103a8565b6060840151516102e9906103a8565b846080015185610100015160405160200180866001600160a01b0316815260200185815260200184815260200183815260200180602001828103825283818151815260200191508051906020019080838360005b8381101561035557818101518382015260200161033d565b50505050905090810190601f1680156103825780820380516001836020036101000a031916815260200191505b509650505050505050604051602081830303815290604052805190602001209050610130565b8051602091820151805190830120604080517f452a0dc408cb0d27ffc3b3caff933a5208040a53a9dbecd8d89cad2c0d40e00c818601526001600160e01b031990931683820152606080840192909252805180840390920182526080909201909152805191012090565b60007f477ed43b8020849b755512278536c3766a3b4ab547519949a75f483372493f8d82600001516104478460200151610645565b84604001516104598660600151610645565b86608001518760a001518860c001518960e001518a610100015180519060200120604051602001808b81526020018a6001600160a01b03168152602001898152602001886001600160a01b03168152602001878152602001868152602001858152602001848152602001836001600160e01b03191681526020018281526020019a5050505050505050505050604051602081830303815290604052805190602001209050919050565b600080821561054157602080860151015161051d90856106b5565b915061053a85606001516020015186602001516020015184610717565b90506101b2565b60608501516020015161055490856106b5565b905061057185602001516020015186606001516020015183610717565b9150935093915050565b60a0810151158061058f5750428160a00151105b6105e0576040805162461bcd60e51b815260206004820152601d60248201527f4f726465722073746172742076616c69646174696f6e206661696c6564000000604482015290519081900360640190fd5b60c081015115806105f45750428160c00151115b61021d576040805162461bcd60e51b815260206004820152601b60248201527f4f7264657220656e642076616c69646174696f6e206661696c65640000000000604482015290519081900360640190fd5b60007fdb6f72e915676cfc289da13bc4ece054fd17b1df6d77ffc4a60510718c236b0861067583600001516103a8565b8360200151604051602001808481526020018381526020018281526020019350505050604051602081830303815290604052805190602001209050919050565b60008282111561070c576040805162461bcd60e51b815260206004820152601e60248201527f536166654d6174683a207375627472616374696f6e206f766572666c6f770000604482015290519081900360640190fd5b508082035b92915050565b6000610724848484610783565b15610767576040805162461bcd60e51b815260206004820152600e60248201526d3937bab73234b7339032b93937b960911b604482015290519081900360640190fd5b61077b836107758685610814565b9061086d565b949350505050565b6000826107ca576040805162461bcd60e51b815260206004820152601060248201526f6469766973696f6e206279207a65726f60801b604482015290519081900360640190fd5b8115806107d5575083155b156107e25750600061080d565b600083806107ec57fe5b85840990506107fb8584610814565b610807826103e8610814565b10159150505b9392505050565b60008261082357506000610711565b8282028284828161083057fe5b041461080d5760405162461bcd60e51b8152600401808060200182810382526021815260200180610d996021913960400191505060405180910390fd5b60008082116108c3576040805162461bcd60e51b815260206004820152601a60248201527f536166654d6174683a206469766973696f6e206279207a65726f000000000000604482015290519081900360640190fd5b8183816108cc57fe5b049392505050565b80356001600160a01b038116811461013057600080fd5b80356001600160e01b03198116811461013057600080fd5b600082601f830112610913578081fd5b813567ffffffffffffffff81111561092757fe5b61093a601f8201601f1916602001610c8b565b81815284602083860101111561094e578283fd5b816020850160208301379081016020019190915292915050565b6000604080838503121561097a578182fd5b805181810167ffffffffffffffff828210818311171561099657fe5b8184528294508535818111156109ab57600080fd5b86018088038513156109bc57600080fd5b6080840183811083821117156109ce57fe5b85526109d9816108eb565b835260208101359450818511156109ef57600080fd5b6109fb88868301610903565b60608501525050815260209384013593019290925292915050565b60006101208284031215610a28578081fd5b50919050565b60008060008060808587031215610a43578384fd5b610a4c856108d4565b9350602085013567ffffffffffffffff80821115610a68578485fd5b610a7488838901610968565b94506040870135915080821115610a89578384fd5b50610a9687828801610968565b949793965093946060013593505050565b600080600080600060a08688031215610abe578081fd5b610ac7866108d4565b9450602086013567ffffffffffffffff80821115610ae3578283fd5b610aef89838a01610968565b95506040880135915080821115610b04578283fd5b610b1089838a01610968565b9450606088013593506080880135915080821115610b2c578283fd5b50610b3988828901610903565b9150509295509295909350565b600060208284031215610b57578081fd5b813567ffffffffffffffff811115610b6d578182fd5b61077b84828501610a16565b600080600060608486031215610b8d578283fd5b833567ffffffffffffffff811115610ba3578384fd5b610baf86828701610a16565b9350506020840135915060408401358015158114610bcb578182fd5b809150509250925092565b6001600160a01b0394909416845260208401929092526040830152606082015260800190565b600060018060a01b03871682526020868184015285604084015284606084015260a0608084015283518060a0850152825b81811015610c495785810183015185820160c001528201610c2d565b81811115610c5a578360c083870101525b50601f01601f19169290920160c001979650505050505050565b90815260200190565b918252602082015260400190565b60405181810167ffffffffffffffff81118282101715610ca757fe5b604052919050565b6000610120808336031215610cc2578182fd5b610ccb81610c8b565b9050610cd6836108d4565b8152602083013567ffffffffffffffff80821115610cf2578384fd5b610cfe36838701610968565b6020840152610d0f604086016108d4565b60408401526060850135915080821115610d27578384fd5b610d3336838701610968565b60608401526080850135608084015260a085013560a084015260c085013560c0840152610d6260e086016108eb565b60e084015261010091508185013581811115610d7c578485fd5b610d8836828801610903565b838501525050508091505091905056fe536166654d6174683a206d756c7469706c69636174696f6e206f766572666c6f77a2646970667358221220e6ca1435862dc9d791f99e820a13bd34613bc27ea9f074d1d40f2818ad40d32564736f6c63430007060033",
+    "sourceMap": "134:1547:5:-:0;;;;;;;;;;;;;;;;;;;",
+    "deployedSourceMap": "134:1547:5:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;393:129;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;1325:351;;;;;;:::i;:::-;;:::i;1198:119::-;;;;;;:::i;:::-;;:::i;163:222::-;;;;;;:::i;:::-;;:::i;:::-;;;;;;;;:::i;797:393::-;;;;;;:::i;:::-;;:::i;674:115::-;;;;;;:::i;:::-;;:::i;:::-;;393:129;464:7;491:23;;508:5;491:23;:::i;:::-;:16;:23::i;:::-;484:30;;393:129;;;;:::o;1325:351::-;1453:7;1518:5;1542:34;1556:9;:19;;;1542:13;:34::i;:::-;1609:19;;1595:34;;:13;:34::i;:::-;1648:4;1489:178;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;1479:189;;;;;;1472:196;;1325:351;;;;;;:::o;1198:119::-;1263:7;1289:20;;1303:5;1289:20;:::i;:::-;:13;:20::i;163:222::-;273:15;;325:52;;353:5;325:52;:::i;:::-;360:4;366:10;325:27;:52::i;:::-;318:59;;;;163:222;;;;;;;:::o;797:393::-;944:7;1009:5;1033:34;1047:9;:19;;;1033:13;:34::i;:::-;1100:19;;1086:34;;:13;:34::i;:::-;1139:4;1162;980:201;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;970:212;;;;;;963:219;;797:393;;;;;;;:::o;674:115::-;748:33;;775:5;748:33;:::i;:::-;:26;:33::i;:::-;674:115;:::o;1521:763:1:-;1605:14;;;;1581:7;;-1:-1:-1;;;;;;1605:35:1;-1:-1:-1;;;1605:35:1;;:75;;-1:-1:-1;1662:18:1;1644:14;;;-1:-1:-1;;;;;;1644:36:1;;;;1605:75;1601:676;;;1743:11;;1787:15;;;;:25;1773:40;;:13;:40::i;:::-;1846:15;;;;:25;1832:40;;:13;:40::i;:::-;1891:5;:10;;;1714:202;;;;;;-1:-1:-1;;;;;1714:202:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1704:213;;;;;;1697:220;;;;1601:676;2062:11;;2106:15;;;;:25;2092:40;;:13;:40::i;:::-;2165:15;;;;:25;2151:40;;:13;:40::i;:::-;2210:5;:10;;;2239:5;:10;;;2033:231;;;;;;-1:-1:-1;;;;;2033:231:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2023:242;;;;;;2016:249;;;;974:257:7;1143:20;;1192:14;;;;;1182:25;;;;;;1076:146;;;584:68;1076:146;;;;-1:-1:-1;;;;;;1076:146:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1066:157;;;;;;974:257::o;2292:479:1:-;2349:7;406:240;2448:5;:11;;;2478:30;2492:5;:15;;;2478:13;:30::i;:::-;2527:5;:11;;;2557:30;2571:5;:15;;;2557:13;:30::i;:::-;2606:5;:10;;;2635:5;:11;;;2665:5;:9;;;2693:5;:14;;;2736:5;:10;;;2726:21;;;;;;2386:376;;;;;;;;;;;-1:-1:-1;;;;;2386:376:1;;;;;;;;;;;-1:-1:-1;;;;;2386:376:1;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;2386:376:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2376:387;;;;;;2369:394;;2292:479;;;:::o;967:546::-;1066:14;1082;1113:10;1109:396;;;1151:15;;;;;:21;;:31;;1177:4;1151:25;:31::i;:::-;1139:43;;1209:90;1243:5;:15;;;:21;;;1266:5;:15;;;:21;;;1289:9;1209:33;:90::i;:::-;1197:102;;1109:396;;;1344:15;;;;:21;;;:31;;1370:4;1344:25;:31::i;:::-;1332:43;;1402:90;1436:5;:15;;;:21;;;1459:5;:15;;;:21;;;1482:9;1402:33;:90::i;:::-;1390:102;;967:546;;;;;;:::o;2779:276::-;2868:11;;;;:16;;:49;;;2902:15;2888:5;:11;;;:29;2868:49;2860:91;;;;;-1:-1:-1;;;2860:91:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;2970:9;;;;:14;;:45;;;3000:15;2988:5;:9;;;:27;2970:45;2962:85;;;;;-1:-1:-1;;;2962:85:1;;;;;;;;;;;;;;;;;;;;;;;;;;;1239:231:7;1296:7;695:108;1395:21;1400:5;:15;;;1395:4;:21::i;:::-;1435:5;:11;;;1333:128;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1323:139;;;;;;1316:146;;1239:231;;;:::o;3147:155:6:-;3205:7;3237:1;3232;:6;;3224:49;;;;;-1:-1:-1;;;3224:49:6;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;3290:5:6;;;3147:155;;;;;:::o;602:363:0:-;750:21;788:52;809:9;820:11;833:6;788:20;:52::i;:::-;784:109;;;857:24;;;-1:-1:-1;;;857:24:0;;;;;;;;;;;;-1:-1:-1;;;857:24:0;;;;;;;;;;;;;;784:109;919:38;945:11;919:21;:9;933:6;919:13;:21::i;:::-;:25;;:38::i;:::-;903:54;602:363;-1:-1:-1;;;;602:363:0:o;1239:1820::-;1382:12;1411:16;1407:75;;1444:26;;;-1:-1:-1;;;1444:26:0;;;;;;;;;;;;-1:-1:-1;;;1444:26:0;;;;;;;;;;;;;;1407:75;2307:11;;;:29;;-1:-1:-1;2322:14:0;;2307:29;2303:74;;;-1:-1:-1;2360:5:0;2353:12;;2303:74;2878:17;2964:11;2898:88;;;;;2940:9;2919:6;2898:88;2878:108;-1:-1:-1;3030:21:0;:9;3044:6;3030:13;:21::i;:::-;3007:19;:9;3021:4;3007:13;:19::i;:::-;:44;;2997:54;;1239:1820;;;;;;;:::o;3549:215:6:-;3607:7;3630:6;3626:20;;-1:-1:-1;3645:1:6;3638:8;;3626:20;3668:5;;;3672:1;3668;:5;:1;3691:5;;;;;:10;3683:56;;;;-1:-1:-1;;;3683:56:6;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4228:150;4286:7;4317:1;4313;:5;4305:44;;;;;-1:-1:-1;;;4305:44:6;;;;;;;;;;;;;;;;;;;;;;;;;;;;4370:1;4366;:5;;;;;;;4228:150;-1:-1:-1;;;4228:150:6:o;14:175:9:-;84:20;;-1:-1:-1;;;;;133:31:9;;123:42;;113:2;;179:1;176;169:12;194:175;263:20;;-1:-1:-1;;;;;;312:32:9;;302:43;;292:2;;359:1;356;349:12;374:542;;471:3;464:4;456:6;452:17;448:27;438:2;;493:5;486;479:20;438:2;533:6;520:20;559:18;555:2;552:26;549:2;;;581:9;549:2;616:54;658:2;639:13;;-1:-1:-1;;635:27:9;664:4;631:38;616:54;:::i;:::-;695:2;686:7;679:19;741:3;734:4;729:2;721:6;717:15;713:26;710:35;707:2;;;762:5;755;748:20;707:2;831;824:4;816:6;812:17;805:4;796:7;792:18;779:55;854:16;;;872:4;850:27;843:42;;;;858:7;428:488;-1:-1:-1;;428:488:9:o;921:1060::-;;1006:4;1047:2;1035:9;1030:3;1026:19;1022:28;1019:2;;;1067:5;1060;1053:20;1019:2;1104;1098:9;1146:2;1138:6;1134:15;1168:18;1236:6;1224:10;1221:22;1216:2;1204:10;1201:18;1198:46;1195:2;;;1247:9;1195:2;1278:10;1274:2;1267:22;1307:6;1298:15;;1349:9;1336:23;1382:2;1374:6;1371:14;1368:2;;;1398:1;1395;1388:12;1368:2;1421:22;;1459:12;;;1455:21;-1:-1:-1;1452:2:9;;;1489:1;1486;1479:12;1452:2;1534:3;1526:6;1522:16;1592:10;1578:12;1575:28;1570:2;1556:12;1553:20;1550:54;1547:2;;;1607:9;1547:2;1627:24;;1679:23;1699:2;1679:23;:::i;:::-;1667:10;1660:43;1749:2;1745;1741:11;1728:25;1712:41;;1778:2;1768:8;1765:16;1762:2;;;1794:1;1791;1784:12;1762:2;1831:42;1869:3;1858:8;1854:2;1850:17;1831:42;:::i;:::-;1826:2;1814:15;;1807:67;-1:-1:-1;;1883:26:9;;1970:2;1955:18;;;1942:32;1925:15;;1918:57;;;;986:995;;-1:-1:-1;;986:995:9:o;1986:165::-;;2092:3;2083:6;2078:3;2074:16;2070:26;2067:2;;;2113:5;2106;2099:20;2067:2;-1:-1:-1;2139:6:9;2057:94;-1:-1:-1;2057:94:9:o;2156:762::-;;;;;2365:3;2353:9;2344:7;2340:23;2336:33;2333:2;;;2387:6;2379;2372:22;2333:2;2415:31;2436:9;2415:31;:::i;:::-;2405:41;;2497:2;2486:9;2482:18;2469:32;2520:18;2561:2;2553:6;2550:14;2547:2;;;2582:6;2574;2567:22;2547:2;2610:59;2661:7;2652:6;2641:9;2637:22;2610:59;:::i;:::-;2600:69;;2722:2;2711:9;2707:18;2694:32;2678:48;;2751:2;2741:8;2738:16;2735:2;;;2772:6;2764;2757:22;2735:2;;2800:61;2853:7;2842:8;2831:9;2827:24;2800:61;:::i;:::-;2323:595;;;;-1:-1:-1;2790:71:9;;2908:2;2893:18;2880:32;;-1:-1:-1;;;2323:595:9:o;2923:973::-;;;;;;3158:3;3146:9;3137:7;3133:23;3129:33;3126:2;;;3180:6;3172;3165:22;3126:2;3208:31;3229:9;3208:31;:::i;:::-;3198:41;;3290:2;3279:9;3275:18;3262:32;3313:18;3354:2;3346:6;3343:14;3340:2;;;3375:6;3367;3360:22;3340:2;3403:59;3454:7;3445:6;3434:9;3430:22;3403:59;:::i;:::-;3393:69;;3515:2;3504:9;3500:18;3487:32;3471:48;;3544:2;3534:8;3531:16;3528:2;;;3565:6;3557;3550:22;3528:2;3593:61;3646:7;3635:8;3624:9;3620:24;3593:61;:::i;:::-;3583:71;;3701:2;3690:9;3686:18;3673:32;3663:42;;3758:3;3747:9;3743:19;3730:33;3714:49;;3788:2;3778:8;3775:16;3772:2;;;3809:6;3801;3794:22;3772:2;;3837:53;3882:7;3871:8;3860:9;3856:24;3837:53;:::i;:::-;3827:63;;;3116:780;;;;;;;;:::o;3901:374::-;;4037:2;4025:9;4016:7;4012:23;4008:32;4005:2;;;4058:6;4050;4043:22;4005:2;4103:9;4090:23;4136:18;4128:6;4125:30;4122:2;;;4173:6;4165;4158:22;4122:2;4201:68;4261:7;4252:6;4241:9;4237:22;4201:68;:::i;4280:613::-;;;;4447:2;4435:9;4426:7;4422:23;4418:32;4415:2;;;4468:6;4460;4453:22;4415:2;4513:9;4500:23;4546:18;4538:6;4535:30;4532:2;;;4583:6;4575;4568:22;4532:2;4611:68;4671:7;4662:6;4651:9;4647:22;4611:68;:::i;:::-;4601:78;;;4726:2;4715:9;4711:18;4698:32;4688:42;;4780:2;4769:9;4765:18;4752:32;4827:5;4820:13;4813:21;4806:5;4803:32;4793:2;;4854:6;4846;4839:22;4793:2;4882:5;4872:15;;;4405:488;;;;;:::o;4898:417::-;-1:-1:-1;;;;;5147:32:9;;;;5129:51;;5211:2;5196:18;;5189:34;;;;5254:2;5239:18;;5232:34;5297:2;5282:18;;5275:34;5116:3;5101:19;;5083:232::o;5320:917::-;;5608:1;5604;5599:3;5595:11;5591:19;5583:6;5579:32;5568:9;5561:51;5631:2;5669:6;5664:2;5653:9;5649:18;5642:34;5712:6;5707:2;5696:9;5692:18;5685:34;5755:6;5750:2;5739:9;5735:18;5728:34;5799:3;5793;5782:9;5778:19;5771:32;5832:6;5826:13;5876:6;5870:3;5859:9;5855:19;5848:35;5901:4;5914:141;5928:6;5925:1;5922:13;5914:141;;;6024:14;;;6020:23;;6014:30;5989:17;;;6008:3;5985:27;5978:67;5943:10;;5914:141;;;6073:6;6070:1;6067:13;6064:2;;;6144:4;6138:3;6129:6;6118:9;6114:22;6110:32;6103:46;6064:2;-1:-1:-1;6220:2:9;6199:15;-1:-1:-1;;6195:29:9;6180:45;;;;6227:3;6176:55;;5551:686;-1:-1:-1;;;;;;;5551:686:9:o;6242:177::-;6388:25;;;6376:2;6361:18;;6343:76::o;6424:248::-;6598:25;;;6654:2;6639:18;;6632:34;6586:2;6571:18;;6553:119::o;6677:242::-;6747:2;6741:9;6777:17;;;6824:18;6809:34;;6845:22;;;6806:62;6803:2;;;6871:9;6803:2;6898;6891:22;6721:198;;-1:-1:-1;6721:198:9:o;6924:1368::-;;7054:6;7104:2;7096:5;7080:14;7076:26;7072:35;7069:2;;;7128:9;7117;7110:28;7069:2;7164:18;7179:2;7164:18;:::i;:::-;7149:33;;7207:27;7228:5;7207:27;:::i;:::-;7198:7;7191:44;7282:2;7275:5;7271:14;7258:28;7305:18;7346:2;7338:6;7335:14;7332:2;;;7370:9;7359;7352:28;7332:2;7416:62;7463:14;7454:6;7447:5;7443:18;7416:62;:::i;:::-;7411:2;7402:7;7398:16;7391:88;7513:36;7545:2;7538:5;7534:14;7513:36;:::i;:::-;7508:2;7499:7;7495:16;7488:62;7599:2;7592:5;7588:14;7575:28;7559:44;;7628:2;7618:8;7615:16;7612:2;;;7652:9;7641;7634:28;7612:2;7698:64;7747:14;7736:8;7729:5;7725:20;7698:64;:::i;:::-;7693:2;7684:7;7680:16;7673:90;7822:3;7815:5;7811:15;7798:29;7792:3;7783:7;7779:17;7772:56;7887:3;7880:5;7876:15;7863:29;7857:3;7848:7;7844:17;7837:56;7952:3;7945:5;7941:15;7928:29;7922:3;7913:7;7909:17;7902:56;7993:36;8024:3;8017:5;8013:15;7993:36;:::i;:::-;7987:3;7978:7;7974:17;7967:63;8049:3;8039:13;;8101:2;8094:5;8090:14;8077:28;8130:2;8120:8;8117:16;8114:2;;;8154:9;8143;8136:28;8114:2;8200:56;8241:14;8230:8;8223:5;8219:20;8200:56;:::i;:::-;8195:2;8186:7;8182:16;8175:82;;;;8279:7;8266:20;;;7034:1258;;;:::o",
+    "sourcePath": "c:/Users/SuperDev/Documents/Repos/protocol-contracts/exchange-v2/test/contracts/LibOrderTest.sol",
+    "compiler": {
+        "name": "solc",
+        "version": "0.7.6+commit.7338295f"
+    },
+    "ast": {
+        "absolutePath": "c:/Users/SuperDev/Documents/Repos/protocol-contracts/exchange-v2/test/contracts/LibOrderTest.sol",
+        "exportedSymbols": {
+            "LibAsset": [
+                1133
+            ],
+            "LibMath": [
+                196
+            ],
+            "LibOrder": [
+                438
+            ],
+            "LibOrderDataV1": [
+                458
+            ],
+            "LibOrderDataV2": [
+                480
+            ],
+            "LibOrderDataV3": [
+                521
+            ],
+            "LibOrderTest": [
+                665
+            ],
+            "LibPart": [
+                1165
+            ],
+            "SafeMathUpgradeable": [
+                1020
+            ]
+        },
+        "id": 666,
+        "license": "MIT",
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 523,
+                "literals": [
+                    "solidity",
+                    "0.7",
+                    ".6"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "35:22:5"
+            },
+            {
+                "id": 524,
+                "literals": [
+                    "abicoder",
+                    "v2"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "59:19:5"
+            },
+            {
+                "absolutePath": "c:/Users/SuperDev/Documents/Repos/protocol-contracts/exchange-v2/contracts/libraries/LibOrder.sol",
+                "file": "../../contracts/libraries/LibOrder.sol",
+                "id": 525,
+                "nodeType": "ImportDirective",
+                "scope": 666,
+                "sourceUnit": 439,
+                "src": "82:48:5",
+                "symbolAliases": [],
+                "unitAlias": ""
+            },
+            {
+                "abstract": false,
+                "baseContracts": [],
+                "contractDependencies": [],
+                "contractKind": "contract",
+                "fullyImplemented": true,
+                "id": 665,
+                "linearizedBaseContracts": [
+                    665
+                ],
+                "name": "LibOrderTest",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "body": {
+                            "id": 545,
+                            "nodeType": "Block",
+                            "src": "307:78:5",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "id": 540,
+                                                "name": "order",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 527,
+                                                "src": "353:5:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_Order_$233_calldata_ptr",
+                                                    "typeString": "struct LibOrder.Order calldata"
+                                                }
+                                            },
+                                            {
+                                                "id": 541,
+                                                "name": "fill",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 529,
+                                                "src": "360:4:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            {
+                                                "id": 542,
+                                                "name": "isMakeFill",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 531,
+                                                "src": "366:10:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_struct$_Order_$233_calldata_ptr",
+                                                    "typeString": "struct LibOrder.Order calldata"
+                                                },
+                                                {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                },
+                                                {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                }
+                                            ],
+                                            "expression": {
+                                                "id": 538,
+                                                "name": "LibOrder",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 438,
+                                                "src": "325:8:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_type$_t_contract$_LibOrder_$438_$",
+                                                    "typeString": "type(library LibOrder)"
+                                                }
+                                            },
+                                            "id": 539,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberName": "calculateRemaining",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 295,
+                                            "src": "325:27:5",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_internal_pure$_t_struct$_Order_$233_memory_ptr_$_t_uint256_$_t_bool_$returns$_t_uint256_$_t_uint256_$",
+                                                "typeString": "function (struct LibOrder.Order memory,uint256,bool) pure returns (uint256,uint256)"
+                                            }
+                                        },
+                                        "id": 543,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "325:52:5",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$_t_uint256_$_t_uint256_$",
+                                            "typeString": "tuple(uint256,uint256)"
+                                        }
+                                    },
+                                    "functionReturnParameters": 537,
+                                    "id": 544,
+                                    "nodeType": "Return",
+                                    "src": "318:59:5"
+                                }
+                            ]
+                        },
+                        "functionSelector": "475f4e4e",
+                        "id": 546,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "calculateRemaining",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 532,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 527,
+                                    "mutability": "mutable",
+                                    "name": "order",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 546,
+                                    "src": "191:29:5",
+                                    "stateVariable": false,
+                                    "storageLocation": "calldata",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_struct$_Order_$233_calldata_ptr",
+                                        "typeString": "struct LibOrder.Order"
+                                    },
+                                    "typeName": {
+                                        "id": 526,
+                                        "name": "LibOrder.Order",
+                                        "nodeType": "UserDefinedTypeName",
+                                        "referencedDeclaration": 233,
+                                        "src": "191:14:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_struct$_Order_$233_storage_ptr",
+                                            "typeString": "struct LibOrder.Order"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 529,
+                                    "mutability": "mutable",
+                                    "name": "fill",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 546,
+                                    "src": "222:9:5",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 528,
+                                        "name": "uint",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "222:4:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 531,
+                                    "mutability": "mutable",
+                                    "name": "isMakeFill",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 546,
+                                    "src": "233:15:5",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bool",
+                                        "typeString": "bool"
+                                    },
+                                    "typeName": {
+                                        "id": 530,
+                                        "name": "bool",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "233:4:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bool",
+                                            "typeString": "bool"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "190:59:5"
+                        },
+                        "returnParameters": {
+                            "id": 537,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 534,
+                                    "mutability": "mutable",
+                                    "name": "makeAmount",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 546,
+                                    "src": "273:15:5",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 533,
+                                        "name": "uint",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "273:4:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 536,
+                                    "mutability": "mutable",
+                                    "name": "takeAmount",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 546,
+                                    "src": "290:15:5",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 535,
+                                        "name": "uint",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "290:4:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "272:34:5"
+                        },
+                        "scope": 665,
+                        "src": "163:222:5",
+                        "stateMutability": "pure",
+                        "virtual": false,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": {
+                            "id": 558,
+                            "nodeType": "Block",
+                            "src": "473:49:5",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "id": 555,
+                                                "name": "order",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 548,
+                                                "src": "508:5:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_Order_$233_calldata_ptr",
+                                                    "typeString": "struct LibOrder.Order calldata"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_struct$_Order_$233_calldata_ptr",
+                                                    "typeString": "struct LibOrder.Order calldata"
+                                                }
+                                            ],
+                                            "expression": {
+                                                "id": 553,
+                                                "name": "LibOrder",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 438,
+                                                "src": "491:8:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_type$_t_contract$_LibOrder_$438_$",
+                                                    "typeString": "type(library LibOrder)"
+                                                }
+                                            },
+                                            "id": 554,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberName": "hashKey",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 362,
+                                            "src": "491:16:5",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_internal_pure$_t_struct$_Order_$233_memory_ptr_$returns$_t_bytes32_$",
+                                                "typeString": "function (struct LibOrder.Order memory) pure returns (bytes32)"
+                                            }
+                                        },
+                                        "id": 556,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "491:23:5",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes32",
+                                            "typeString": "bytes32"
+                                        }
+                                    },
+                                    "functionReturnParameters": 552,
+                                    "id": 557,
+                                    "nodeType": "Return",
+                                    "src": "484:30:5"
+                                }
+                            ]
+                        },
+                        "functionSelector": "058dbeef",
+                        "id": 559,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "hashKey",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 549,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 548,
+                                    "mutability": "mutable",
+                                    "name": "order",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 559,
+                                    "src": "410:29:5",
+                                    "stateVariable": false,
+                                    "storageLocation": "calldata",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_struct$_Order_$233_calldata_ptr",
+                                        "typeString": "struct LibOrder.Order"
+                                    },
+                                    "typeName": {
+                                        "id": 547,
+                                        "name": "LibOrder.Order",
+                                        "nodeType": "UserDefinedTypeName",
+                                        "referencedDeclaration": 233,
+                                        "src": "410:14:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_struct$_Order_$233_storage_ptr",
+                                            "typeString": "struct LibOrder.Order"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "409:31:5"
+                        },
+                        "returnParameters": {
+                            "id": 552,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 551,
+                                    "mutability": "mutable",
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 559,
+                                    "src": "464:7:5",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes32",
+                                        "typeString": "bytes32"
+                                    },
+                                    "typeName": {
+                                        "id": 550,
+                                        "name": "bytes32",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "464:7:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes32",
+                                            "typeString": "bytes32"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "463:9:5"
+                        },
+                        "scope": 665,
+                        "src": "393:129:5",
+                        "stateMutability": "pure",
+                        "virtual": false,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": {
+                            "id": 571,
+                            "nodeType": "Block",
+                            "src": "617:49:5",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "id": 568,
+                                                "name": "order",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 561,
+                                                "src": "652:5:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_Order_$233_calldata_ptr",
+                                                    "typeString": "struct LibOrder.Order calldata"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_struct$_Order_$233_calldata_ptr",
+                                                    "typeString": "struct LibOrder.Order calldata"
+                                                }
+                                            ],
+                                            "expression": {
+                                                "id": 566,
+                                                "name": "LibOrder",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 438,
+                                                "src": "635:8:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_type$_t_contract$_LibOrder_$438_$",
+                                                    "typeString": "type(library LibOrder)"
+                                                }
+                                            },
+                                            "id": 567,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberName": "hashKey",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 362,
+                                            "src": "635:16:5",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_internal_pure$_t_struct$_Order_$233_memory_ptr_$returns$_t_bytes32_$",
+                                                "typeString": "function (struct LibOrder.Order memory) pure returns (bytes32)"
+                                            }
+                                        },
+                                        "id": 569,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "635:23:5",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes32",
+                                            "typeString": "bytes32"
+                                        }
+                                    },
+                                    "functionReturnParameters": 565,
+                                    "id": 570,
+                                    "nodeType": "Return",
+                                    "src": "628:30:5"
+                                }
+                            ]
+                        },
+                        "functionSelector": "bcba5fb0",
+                        "id": 572,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "hashKeyOnChain",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 562,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 561,
+                                    "mutability": "mutable",
+                                    "name": "order",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 572,
+                                    "src": "554:29:5",
+                                    "stateVariable": false,
+                                    "storageLocation": "calldata",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_struct$_Order_$233_calldata_ptr",
+                                        "typeString": "struct LibOrder.Order"
+                                    },
+                                    "typeName": {
+                                        "id": 560,
+                                        "name": "LibOrder.Order",
+                                        "nodeType": "UserDefinedTypeName",
+                                        "referencedDeclaration": 233,
+                                        "src": "554:14:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_struct$_Order_$233_storage_ptr",
+                                            "typeString": "struct LibOrder.Order"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "553:31:5"
+                        },
+                        "returnParameters": {
+                            "id": 565,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 564,
+                                    "mutability": "mutable",
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 572,
+                                    "src": "608:7:5",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes32",
+                                        "typeString": "bytes32"
+                                    },
+                                    "typeName": {
+                                        "id": 563,
+                                        "name": "bytes32",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "608:7:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes32",
+                                            "typeString": "bytes32"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "607:9:5"
+                        },
+                        "scope": 665,
+                        "src": "530:136:5",
+                        "stateMutability": "pure",
+                        "virtual": false,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": {
+                            "id": 583,
+                            "nodeType": "Block",
+                            "src": "737:52:5",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "id": 580,
+                                                "name": "order",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 574,
+                                                "src": "775:5:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_Order_$233_calldata_ptr",
+                                                    "typeString": "struct LibOrder.Order calldata"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_struct$_Order_$233_calldata_ptr",
+                                                    "typeString": "struct LibOrder.Order calldata"
+                                                }
+                                            ],
+                                            "expression": {
+                                                "id": 577,
+                                                "name": "LibOrder",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 438,
+                                                "src": "748:8:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_type$_t_contract$_LibOrder_$438_$",
+                                                    "typeString": "type(library LibOrder)"
+                                                }
+                                            },
+                                            "id": 579,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberName": "validateOrderTime",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 437,
+                                            "src": "748:26:5",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_internal_view$_t_struct$_Order_$233_memory_ptr_$returns$__$",
+                                                "typeString": "function (struct LibOrder.Order memory) view"
+                                            }
+                                        },
+                                        "id": 581,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "748:33:5",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 582,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "748:33:5"
+                                }
+                            ]
+                        },
+                        "functionSelector": "87774dd9",
+                        "id": 584,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "validate",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 575,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 574,
+                                    "mutability": "mutable",
+                                    "name": "order",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 584,
+                                    "src": "692:29:5",
+                                    "stateVariable": false,
+                                    "storageLocation": "calldata",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_struct$_Order_$233_calldata_ptr",
+                                        "typeString": "struct LibOrder.Order"
+                                    },
+                                    "typeName": {
+                                        "id": 573,
+                                        "name": "LibOrder.Order",
+                                        "nodeType": "UserDefinedTypeName",
+                                        "referencedDeclaration": 233,
+                                        "src": "692:14:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_struct$_Order_$233_storage_ptr",
+                                            "typeString": "struct LibOrder.Order"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "691:31:5"
+                        },
+                        "returnParameters": {
+                            "id": 576,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "737:0:5"
+                        },
+                        "scope": 665,
+                        "src": "674:115:5",
+                        "stateMutability": "view",
+                        "virtual": false,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": {
+                            "id": 618,
+                            "nodeType": "Block",
+                            "src": "952:238:5",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "arguments": [
+                                                    {
+                                                        "id": 602,
+                                                        "name": "maker",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 586,
+                                                        "src": "1009:5:5",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_address",
+                                                            "typeString": "address"
+                                                        }
+                                                    },
+                                                    {
+                                                        "arguments": [
+                                                            {
+                                                                "expression": {
+                                                                    "id": 605,
+                                                                    "name": "makeAsset",
+                                                                    "nodeType": "Identifier",
+                                                                    "overloadedDeclarations": [],
+                                                                    "referencedDeclaration": 588,
+                                                                    "src": "1047:9:5",
+                                                                    "typeDescriptions": {
+                                                                        "typeIdentifier": "t_struct$_Asset_$1090_memory_ptr",
+                                                                        "typeString": "struct LibAsset.Asset memory"
+                                                                    }
+                                                                },
+                                                                "id": 606,
+                                                                "isConstant": false,
+                                                                "isLValue": true,
+                                                                "isPure": false,
+                                                                "lValueRequested": false,
+                                                                "memberName": "assetType",
+                                                                "nodeType": "MemberAccess",
+                                                                "referencedDeclaration": 1087,
+                                                                "src": "1047:19:5",
+                                                                "typeDescriptions": {
+                                                                    "typeIdentifier": "t_struct$_AssetType_$1085_memory_ptr",
+                                                                    "typeString": "struct LibAsset.AssetType memory"
+                                                                }
+                                                            }
+                                                        ],
+                                                        "expression": {
+                                                            "argumentTypes": [
+                                                                {
+                                                                    "typeIdentifier": "t_struct$_AssetType_$1085_memory_ptr",
+                                                                    "typeString": "struct LibAsset.AssetType memory"
+                                                                }
+                                                            ],
+                                                            "expression": {
+                                                                "id": 603,
+                                                                "name": "LibAsset",
+                                                                "nodeType": "Identifier",
+                                                                "overloadedDeclarations": [],
+                                                                "referencedDeclaration": 1133,
+                                                                "src": "1033:8:5",
+                                                                "typeDescriptions": {
+                                                                    "typeIdentifier": "t_type$_t_contract$_LibAsset_$1133_$",
+                                                                    "typeString": "type(library LibAsset)"
+                                                                }
+                                                            },
+                                                            "id": 604,
+                                                            "isConstant": false,
+                                                            "isLValue": false,
+                                                            "isPure": false,
+                                                            "lValueRequested": false,
+                                                            "memberName": "hash",
+                                                            "nodeType": "MemberAccess",
+                                                            "referencedDeclaration": 1111,
+                                                            "src": "1033:13:5",
+                                                            "typeDescriptions": {
+                                                                "typeIdentifier": "t_function_internal_pure$_t_struct$_AssetType_$1085_memory_ptr_$returns$_t_bytes32_$",
+                                                                "typeString": "function (struct LibAsset.AssetType memory) pure returns (bytes32)"
+                                                            }
+                                                        },
+                                                        "id": 607,
+                                                        "isConstant": false,
+                                                        "isLValue": false,
+                                                        "isPure": false,
+                                                        "kind": "functionCall",
+                                                        "lValueRequested": false,
+                                                        "names": [],
+                                                        "nodeType": "FunctionCall",
+                                                        "src": "1033:34:5",
+                                                        "tryCall": false,
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_bytes32",
+                                                            "typeString": "bytes32"
+                                                        }
+                                                    },
+                                                    {
+                                                        "arguments": [
+                                                            {
+                                                                "expression": {
+                                                                    "id": 610,
+                                                                    "name": "takeAsset",
+                                                                    "nodeType": "Identifier",
+                                                                    "overloadedDeclarations": [],
+                                                                    "referencedDeclaration": 590,
+                                                                    "src": "1100:9:5",
+                                                                    "typeDescriptions": {
+                                                                        "typeIdentifier": "t_struct$_Asset_$1090_memory_ptr",
+                                                                        "typeString": "struct LibAsset.Asset memory"
+                                                                    }
+                                                                },
+                                                                "id": 611,
+                                                                "isConstant": false,
+                                                                "isLValue": true,
+                                                                "isPure": false,
+                                                                "lValueRequested": false,
+                                                                "memberName": "assetType",
+                                                                "nodeType": "MemberAccess",
+                                                                "referencedDeclaration": 1087,
+                                                                "src": "1100:19:5",
+                                                                "typeDescriptions": {
+                                                                    "typeIdentifier": "t_struct$_AssetType_$1085_memory_ptr",
+                                                                    "typeString": "struct LibAsset.AssetType memory"
+                                                                }
+                                                            }
+                                                        ],
+                                                        "expression": {
+                                                            "argumentTypes": [
+                                                                {
+                                                                    "typeIdentifier": "t_struct$_AssetType_$1085_memory_ptr",
+                                                                    "typeString": "struct LibAsset.AssetType memory"
+                                                                }
+                                                            ],
+                                                            "expression": {
+                                                                "id": 608,
+                                                                "name": "LibAsset",
+                                                                "nodeType": "Identifier",
+                                                                "overloadedDeclarations": [],
+                                                                "referencedDeclaration": 1133,
+                                                                "src": "1086:8:5",
+                                                                "typeDescriptions": {
+                                                                    "typeIdentifier": "t_type$_t_contract$_LibAsset_$1133_$",
+                                                                    "typeString": "type(library LibAsset)"
+                                                                }
+                                                            },
+                                                            "id": 609,
+                                                            "isConstant": false,
+                                                            "isLValue": false,
+                                                            "isPure": false,
+                                                            "lValueRequested": false,
+                                                            "memberName": "hash",
+                                                            "nodeType": "MemberAccess",
+                                                            "referencedDeclaration": 1111,
+                                                            "src": "1086:13:5",
+                                                            "typeDescriptions": {
+                                                                "typeIdentifier": "t_function_internal_pure$_t_struct$_AssetType_$1085_memory_ptr_$returns$_t_bytes32_$",
+                                                                "typeString": "function (struct LibAsset.AssetType memory) pure returns (bytes32)"
+                                                            }
+                                                        },
+                                                        "id": 612,
+                                                        "isConstant": false,
+                                                        "isLValue": false,
+                                                        "isPure": false,
+                                                        "kind": "functionCall",
+                                                        "lValueRequested": false,
+                                                        "names": [],
+                                                        "nodeType": "FunctionCall",
+                                                        "src": "1086:34:5",
+                                                        "tryCall": false,
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_bytes32",
+                                                            "typeString": "bytes32"
+                                                        }
+                                                    },
+                                                    {
+                                                        "id": 613,
+                                                        "name": "salt",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 592,
+                                                        "src": "1139:4:5",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_uint256",
+                                                            "typeString": "uint256"
+                                                        }
+                                                    },
+                                                    {
+                                                        "id": 614,
+                                                        "name": "data",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 594,
+                                                        "src": "1162:4:5",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_bytes_memory_ptr",
+                                                            "typeString": "bytes memory"
+                                                        }
+                                                    }
+                                                ],
+                                                "expression": {
+                                                    "argumentTypes": [
+                                                        {
+                                                            "typeIdentifier": "t_address",
+                                                            "typeString": "address"
+                                                        },
+                                                        {
+                                                            "typeIdentifier": "t_bytes32",
+                                                            "typeString": "bytes32"
+                                                        },
+                                                        {
+                                                            "typeIdentifier": "t_bytes32",
+                                                            "typeString": "bytes32"
+                                                        },
+                                                        {
+                                                            "typeIdentifier": "t_uint256",
+                                                            "typeString": "uint256"
+                                                        },
+                                                        {
+                                                            "typeIdentifier": "t_bytes_memory_ptr",
+                                                            "typeString": "bytes memory"
+                                                        }
+                                                    ],
+                                                    "expression": {
+                                                        "id": 600,
+                                                        "name": "abi",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 4294967295,
+                                                        "src": "980:3:5",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_magic_abi",
+                                                            "typeString": "abi"
+                                                        }
+                                                    },
+                                                    "id": 601,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": true,
+                                                    "lValueRequested": false,
+                                                    "memberName": "encode",
+                                                    "nodeType": "MemberAccess",
+                                                    "src": "980:10:5",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_function_abiencode_pure$__$returns$_t_bytes_memory_ptr_$",
+                                                        "typeString": "function () pure returns (bytes memory)"
+                                                    }
+                                                },
+                                                "id": 615,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "kind": "functionCall",
+                                                "lValueRequested": false,
+                                                "names": [],
+                                                "nodeType": "FunctionCall",
+                                                "src": "980:201:5",
+                                                "tryCall": false,
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bytes_memory_ptr",
+                                                    "typeString": "bytes memory"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_bytes_memory_ptr",
+                                                    "typeString": "bytes memory"
+                                                }
+                                            ],
+                                            "id": 599,
+                                            "name": "keccak256",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 4294967288,
+                                            "src": "970:9:5",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                                                "typeString": "function (bytes memory) pure returns (bytes32)"
+                                            }
+                                        },
+                                        "id": 616,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "970:212:5",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes32",
+                                            "typeString": "bytes32"
+                                        }
+                                    },
+                                    "functionReturnParameters": 598,
+                                    "id": 617,
+                                    "nodeType": "Return",
+                                    "src": "963:219:5"
+                                }
+                            ]
+                        },
+                        "functionSelector": "4fa8d605",
+                        "id": 619,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "hashV2",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 595,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 586,
+                                    "mutability": "mutable",
+                                    "name": "maker",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 619,
+                                    "src": "813:13:5",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_address",
+                                        "typeString": "address"
+                                    },
+                                    "typeName": {
+                                        "id": 585,
+                                        "name": "address",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "813:7:5",
+                                        "stateMutability": "nonpayable",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_address",
+                                            "typeString": "address"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 588,
+                                    "mutability": "mutable",
+                                    "name": "makeAsset",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 619,
+                                    "src": "828:31:5",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_struct$_Asset_$1090_memory_ptr",
+                                        "typeString": "struct LibAsset.Asset"
+                                    },
+                                    "typeName": {
+                                        "id": 587,
+                                        "name": "LibAsset.Asset",
+                                        "nodeType": "UserDefinedTypeName",
+                                        "referencedDeclaration": 1090,
+                                        "src": "828:14:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_struct$_Asset_$1090_storage_ptr",
+                                            "typeString": "struct LibAsset.Asset"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 590,
+                                    "mutability": "mutable",
+                                    "name": "takeAsset",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 619,
+                                    "src": "861:31:5",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_struct$_Asset_$1090_memory_ptr",
+                                        "typeString": "struct LibAsset.Asset"
+                                    },
+                                    "typeName": {
+                                        "id": 589,
+                                        "name": "LibAsset.Asset",
+                                        "nodeType": "UserDefinedTypeName",
+                                        "referencedDeclaration": 1090,
+                                        "src": "861:14:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_struct$_Asset_$1090_storage_ptr",
+                                            "typeString": "struct LibAsset.Asset"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 592,
+                                    "mutability": "mutable",
+                                    "name": "salt",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 619,
+                                    "src": "894:9:5",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 591,
+                                        "name": "uint",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "894:4:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 594,
+                                    "mutability": "mutable",
+                                    "name": "data",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 619,
+                                    "src": "905:17:5",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes_memory_ptr",
+                                        "typeString": "bytes"
+                                    },
+                                    "typeName": {
+                                        "id": 593,
+                                        "name": "bytes",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "905:5:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes_storage_ptr",
+                                            "typeString": "bytes"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "812:111:5"
+                        },
+                        "returnParameters": {
+                            "id": 598,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 597,
+                                    "mutability": "mutable",
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 619,
+                                    "src": "944:7:5",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes32",
+                                        "typeString": "bytes32"
+                                    },
+                                    "typeName": {
+                                        "id": 596,
+                                        "name": "bytes32",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "944:7:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes32",
+                                            "typeString": "bytes32"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "943:9:5"
+                        },
+                        "scope": 665,
+                        "src": "797:393:5",
+                        "stateMutability": "pure",
+                        "virtual": false,
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 631,
+                            "nodeType": "Block",
+                            "src": "1271:46:5",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "id": 628,
+                                                "name": "order",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 621,
+                                                "src": "1303:5:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_Order_$233_calldata_ptr",
+                                                    "typeString": "struct LibOrder.Order calldata"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_struct$_Order_$233_calldata_ptr",
+                                                    "typeString": "struct LibOrder.Order calldata"
+                                                }
+                                            ],
+                                            "expression": {
+                                                "id": 626,
+                                                "name": "LibOrder",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 438,
+                                                "src": "1289:8:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_type$_t_contract$_LibOrder_$438_$",
+                                                    "typeString": "type(library LibOrder)"
+                                                }
+                                            },
+                                            "id": 627,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberName": "hash",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 403,
+                                            "src": "1289:13:5",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_internal_pure$_t_struct$_Order_$233_memory_ptr_$returns$_t_bytes32_$",
+                                                "typeString": "function (struct LibOrder.Order memory) pure returns (bytes32)"
+                                            }
+                                        },
+                                        "id": 629,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "1289:20:5",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes32",
+                                            "typeString": "bytes32"
+                                        }
+                                    },
+                                    "functionReturnParameters": 625,
+                                    "id": 630,
+                                    "nodeType": "Return",
+                                    "src": "1282:27:5"
+                                }
+                            ]
+                        },
+                        "functionSelector": "384a6c9d",
+                        "id": 632,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "hash",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 622,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 621,
+                                    "mutability": "mutable",
+                                    "name": "order",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 632,
+                                    "src": "1212:29:5",
+                                    "stateVariable": false,
+                                    "storageLocation": "calldata",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_struct$_Order_$233_calldata_ptr",
+                                        "typeString": "struct LibOrder.Order"
+                                    },
+                                    "typeName": {
+                                        "id": 620,
+                                        "name": "LibOrder.Order",
+                                        "nodeType": "UserDefinedTypeName",
+                                        "referencedDeclaration": 233,
+                                        "src": "1212:14:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_struct$_Order_$233_storage_ptr",
+                                            "typeString": "struct LibOrder.Order"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1211:31:5"
+                        },
+                        "returnParameters": {
+                            "id": 625,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 624,
+                                    "mutability": "mutable",
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 632,
+                                    "src": "1263:7:5",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes32",
+                                        "typeString": "bytes32"
+                                    },
+                                    "typeName": {
+                                        "id": 623,
+                                        "name": "bytes32",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1263:7:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes32",
+                                            "typeString": "bytes32"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1262:9:5"
+                        },
+                        "scope": 665,
+                        "src": "1198:119:5",
+                        "stateMutability": "pure",
+                        "virtual": false,
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 663,
+                            "nodeType": "Block",
+                            "src": "1461:215:5",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "arguments": [
+                                                    {
+                                                        "id": 648,
+                                                        "name": "maker",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 634,
+                                                        "src": "1518:5:5",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_address",
+                                                            "typeString": "address"
+                                                        }
+                                                    },
+                                                    {
+                                                        "arguments": [
+                                                            {
+                                                                "expression": {
+                                                                    "id": 651,
+                                                                    "name": "makeAsset",
+                                                                    "nodeType": "Identifier",
+                                                                    "overloadedDeclarations": [],
+                                                                    "referencedDeclaration": 636,
+                                                                    "src": "1556:9:5",
+                                                                    "typeDescriptions": {
+                                                                        "typeIdentifier": "t_struct$_Asset_$1090_memory_ptr",
+                                                                        "typeString": "struct LibAsset.Asset memory"
+                                                                    }
+                                                                },
+                                                                "id": 652,
+                                                                "isConstant": false,
+                                                                "isLValue": true,
+                                                                "isPure": false,
+                                                                "lValueRequested": false,
+                                                                "memberName": "assetType",
+                                                                "nodeType": "MemberAccess",
+                                                                "referencedDeclaration": 1087,
+                                                                "src": "1556:19:5",
+                                                                "typeDescriptions": {
+                                                                    "typeIdentifier": "t_struct$_AssetType_$1085_memory_ptr",
+                                                                    "typeString": "struct LibAsset.AssetType memory"
+                                                                }
+                                                            }
+                                                        ],
+                                                        "expression": {
+                                                            "argumentTypes": [
+                                                                {
+                                                                    "typeIdentifier": "t_struct$_AssetType_$1085_memory_ptr",
+                                                                    "typeString": "struct LibAsset.AssetType memory"
+                                                                }
+                                                            ],
+                                                            "expression": {
+                                                                "id": 649,
+                                                                "name": "LibAsset",
+                                                                "nodeType": "Identifier",
+                                                                "overloadedDeclarations": [],
+                                                                "referencedDeclaration": 1133,
+                                                                "src": "1542:8:5",
+                                                                "typeDescriptions": {
+                                                                    "typeIdentifier": "t_type$_t_contract$_LibAsset_$1133_$",
+                                                                    "typeString": "type(library LibAsset)"
+                                                                }
+                                                            },
+                                                            "id": 650,
+                                                            "isConstant": false,
+                                                            "isLValue": false,
+                                                            "isPure": false,
+                                                            "lValueRequested": false,
+                                                            "memberName": "hash",
+                                                            "nodeType": "MemberAccess",
+                                                            "referencedDeclaration": 1111,
+                                                            "src": "1542:13:5",
+                                                            "typeDescriptions": {
+                                                                "typeIdentifier": "t_function_internal_pure$_t_struct$_AssetType_$1085_memory_ptr_$returns$_t_bytes32_$",
+                                                                "typeString": "function (struct LibAsset.AssetType memory) pure returns (bytes32)"
+                                                            }
+                                                        },
+                                                        "id": 653,
+                                                        "isConstant": false,
+                                                        "isLValue": false,
+                                                        "isPure": false,
+                                                        "kind": "functionCall",
+                                                        "lValueRequested": false,
+                                                        "names": [],
+                                                        "nodeType": "FunctionCall",
+                                                        "src": "1542:34:5",
+                                                        "tryCall": false,
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_bytes32",
+                                                            "typeString": "bytes32"
+                                                        }
+                                                    },
+                                                    {
+                                                        "arguments": [
+                                                            {
+                                                                "expression": {
+                                                                    "id": 656,
+                                                                    "name": "takeAsset",
+                                                                    "nodeType": "Identifier",
+                                                                    "overloadedDeclarations": [],
+                                                                    "referencedDeclaration": 638,
+                                                                    "src": "1609:9:5",
+                                                                    "typeDescriptions": {
+                                                                        "typeIdentifier": "t_struct$_Asset_$1090_memory_ptr",
+                                                                        "typeString": "struct LibAsset.Asset memory"
+                                                                    }
+                                                                },
+                                                                "id": 657,
+                                                                "isConstant": false,
+                                                                "isLValue": true,
+                                                                "isPure": false,
+                                                                "lValueRequested": false,
+                                                                "memberName": "assetType",
+                                                                "nodeType": "MemberAccess",
+                                                                "referencedDeclaration": 1087,
+                                                                "src": "1609:19:5",
+                                                                "typeDescriptions": {
+                                                                    "typeIdentifier": "t_struct$_AssetType_$1085_memory_ptr",
+                                                                    "typeString": "struct LibAsset.AssetType memory"
+                                                                }
+                                                            }
+                                                        ],
+                                                        "expression": {
+                                                            "argumentTypes": [
+                                                                {
+                                                                    "typeIdentifier": "t_struct$_AssetType_$1085_memory_ptr",
+                                                                    "typeString": "struct LibAsset.AssetType memory"
+                                                                }
+                                                            ],
+                                                            "expression": {
+                                                                "id": 654,
+                                                                "name": "LibAsset",
+                                                                "nodeType": "Identifier",
+                                                                "overloadedDeclarations": [],
+                                                                "referencedDeclaration": 1133,
+                                                                "src": "1595:8:5",
+                                                                "typeDescriptions": {
+                                                                    "typeIdentifier": "t_type$_t_contract$_LibAsset_$1133_$",
+                                                                    "typeString": "type(library LibAsset)"
+                                                                }
+                                                            },
+                                                            "id": 655,
+                                                            "isConstant": false,
+                                                            "isLValue": false,
+                                                            "isPure": false,
+                                                            "lValueRequested": false,
+                                                            "memberName": "hash",
+                                                            "nodeType": "MemberAccess",
+                                                            "referencedDeclaration": 1111,
+                                                            "src": "1595:13:5",
+                                                            "typeDescriptions": {
+                                                                "typeIdentifier": "t_function_internal_pure$_t_struct$_AssetType_$1085_memory_ptr_$returns$_t_bytes32_$",
+                                                                "typeString": "function (struct LibAsset.AssetType memory) pure returns (bytes32)"
+                                                            }
+                                                        },
+                                                        "id": 658,
+                                                        "isConstant": false,
+                                                        "isLValue": false,
+                                                        "isPure": false,
+                                                        "kind": "functionCall",
+                                                        "lValueRequested": false,
+                                                        "names": [],
+                                                        "nodeType": "FunctionCall",
+                                                        "src": "1595:34:5",
+                                                        "tryCall": false,
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_bytes32",
+                                                            "typeString": "bytes32"
+                                                        }
+                                                    },
+                                                    {
+                                                        "id": 659,
+                                                        "name": "salt",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 640,
+                                                        "src": "1648:4:5",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_uint256",
+                                                            "typeString": "uint256"
+                                                        }
+                                                    }
+                                                ],
+                                                "expression": {
+                                                    "argumentTypes": [
+                                                        {
+                                                            "typeIdentifier": "t_address",
+                                                            "typeString": "address"
+                                                        },
+                                                        {
+                                                            "typeIdentifier": "t_bytes32",
+                                                            "typeString": "bytes32"
+                                                        },
+                                                        {
+                                                            "typeIdentifier": "t_bytes32",
+                                                            "typeString": "bytes32"
+                                                        },
+                                                        {
+                                                            "typeIdentifier": "t_uint256",
+                                                            "typeString": "uint256"
+                                                        }
+                                                    ],
+                                                    "expression": {
+                                                        "id": 646,
+                                                        "name": "abi",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 4294967295,
+                                                        "src": "1489:3:5",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_magic_abi",
+                                                            "typeString": "abi"
+                                                        }
+                                                    },
+                                                    "id": 647,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": true,
+                                                    "lValueRequested": false,
+                                                    "memberName": "encode",
+                                                    "nodeType": "MemberAccess",
+                                                    "src": "1489:10:5",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_function_abiencode_pure$__$returns$_t_bytes_memory_ptr_$",
+                                                        "typeString": "function () pure returns (bytes memory)"
+                                                    }
+                                                },
+                                                "id": 660,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "kind": "functionCall",
+                                                "lValueRequested": false,
+                                                "names": [],
+                                                "nodeType": "FunctionCall",
+                                                "src": "1489:178:5",
+                                                "tryCall": false,
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bytes_memory_ptr",
+                                                    "typeString": "bytes memory"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_bytes_memory_ptr",
+                                                    "typeString": "bytes memory"
+                                                }
+                                            ],
+                                            "id": 645,
+                                            "name": "keccak256",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 4294967288,
+                                            "src": "1479:9:5",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                                                "typeString": "function (bytes memory) pure returns (bytes32)"
+                                            }
+                                        },
+                                        "id": 661,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "1479:189:5",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes32",
+                                            "typeString": "bytes32"
+                                        }
+                                    },
+                                    "functionReturnParameters": 644,
+                                    "id": 662,
+                                    "nodeType": "Return",
+                                    "src": "1472:196:5"
+                                }
+                            ]
+                        },
+                        "functionSelector": "27c4ea47",
+                        "id": 664,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "hashV1",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 641,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 634,
+                                    "mutability": "mutable",
+                                    "name": "maker",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 664,
+                                    "src": "1341:13:5",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_address",
+                                        "typeString": "address"
+                                    },
+                                    "typeName": {
+                                        "id": 633,
+                                        "name": "address",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1341:7:5",
+                                        "stateMutability": "nonpayable",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_address",
+                                            "typeString": "address"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 636,
+                                    "mutability": "mutable",
+                                    "name": "makeAsset",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 664,
+                                    "src": "1356:31:5",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_struct$_Asset_$1090_memory_ptr",
+                                        "typeString": "struct LibAsset.Asset"
+                                    },
+                                    "typeName": {
+                                        "id": 635,
+                                        "name": "LibAsset.Asset",
+                                        "nodeType": "UserDefinedTypeName",
+                                        "referencedDeclaration": 1090,
+                                        "src": "1356:14:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_struct$_Asset_$1090_storage_ptr",
+                                            "typeString": "struct LibAsset.Asset"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 638,
+                                    "mutability": "mutable",
+                                    "name": "takeAsset",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 664,
+                                    "src": "1389:31:5",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_struct$_Asset_$1090_memory_ptr",
+                                        "typeString": "struct LibAsset.Asset"
+                                    },
+                                    "typeName": {
+                                        "id": 637,
+                                        "name": "LibAsset.Asset",
+                                        "nodeType": "UserDefinedTypeName",
+                                        "referencedDeclaration": 1090,
+                                        "src": "1389:14:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_struct$_Asset_$1090_storage_ptr",
+                                            "typeString": "struct LibAsset.Asset"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 640,
+                                    "mutability": "mutable",
+                                    "name": "salt",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 664,
+                                    "src": "1422:9:5",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 639,
+                                        "name": "uint",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1422:4:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1340:92:5"
+                        },
+                        "returnParameters": {
+                            "id": 644,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 643,
+                                    "mutability": "mutable",
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 664,
+                                    "src": "1453:7:5",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes32",
+                                        "typeString": "bytes32"
+                                    },
+                                    "typeName": {
+                                        "id": 642,
+                                        "name": "bytes32",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1453:7:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes32",
+                                            "typeString": "bytes32"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1452:9:5"
+                        },
+                        "scope": 665,
+                        "src": "1325:351:5",
+                        "stateMutability": "pure",
+                        "virtual": false,
+                        "visibility": "public"
+                    }
+                ],
+                "scope": 666,
+                "src": "134:1547:5"
+            }
+        ],
+        "src": "35:1648:5"
+    },
+    "functionHashes": {
+        "calculateRemaining((address,((bytes4,bytes),uint256),address,((bytes4,bytes),uint256),uint256,uint256,uint256,bytes4,bytes),uint256,bool)": "475f4e4e",
+        "hash((address,((bytes4,bytes),uint256),address,((bytes4,bytes),uint256),uint256,uint256,uint256,bytes4,bytes))": "384a6c9d",
+        "hashKey((address,((bytes4,bytes),uint256),address,((bytes4,bytes),uint256),uint256,uint256,uint256,bytes4,bytes))": "058dbeef",
+        "hashKeyOnChain((address,((bytes4,bytes),uint256),address,((bytes4,bytes),uint256),uint256,uint256,uint256,bytes4,bytes))": "bcba5fb0",
+        "hashV1(address,((bytes4,bytes),uint256),((bytes4,bytes),uint256),uint256)": "27c4ea47",
+        "hashV2(address,((bytes4,bytes),uint256),((bytes4,bytes),uint256),uint256,bytes)": "4fa8d605",
+        "validate((address,((bytes4,bytes),uint256),address,((bytes4,bytes),uint256),uint256,uint256,uint256,bytes4,bytes))": "87774dd9"
+    },
+    "gasEstimates": {
+        "creation": {
+            "codeDepositCost": "713400",
+            "executionCost": "747",
+            "totalCost": "714147"
+        },
+        "external": {
+            "calculateRemaining((address,((bytes4,bytes),uint256),address,((bytes4,bytes),uint256),uint256,uint256,uint256,bytes4,bytes),uint256,bool)": "infinite",
+            "hash((address,((bytes4,bytes),uint256),address,((bytes4,bytes),uint256),uint256,uint256,uint256,bytes4,bytes))": "infinite",
+            "hashKey((address,((bytes4,bytes),uint256),address,((bytes4,bytes),uint256),uint256,uint256,uint256,bytes4,bytes))": "infinite",
+            "hashKeyOnChain((address,((bytes4,bytes),uint256),address,((bytes4,bytes),uint256),uint256,uint256,uint256,bytes4,bytes))": "infinite",
+            "hashV1(address,((bytes4,bytes),uint256),((bytes4,bytes),uint256),uint256)": "infinite",
+            "hashV2(address,((bytes4,bytes),uint256),((bytes4,bytes),uint256),uint256,bytes)": "infinite",
+            "validate((address,((bytes4,bytes),uint256),address,((bytes4,bytes),uint256),uint256,uint256,uint256,bytes4,bytes))": "infinite"
+        }
+    }
+}

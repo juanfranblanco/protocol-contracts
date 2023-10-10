@@ -1,0 +1,7 @@
+{
+    "projectName": "ProtocolContracts",
+    "namespace": "ProtocolContracts.Contracts",
+    "lang": 0,
+    "autoCodeGen": true,
+    "projectPath": "./ProtocolContractsDotNet/ProtocolContracts"
+}

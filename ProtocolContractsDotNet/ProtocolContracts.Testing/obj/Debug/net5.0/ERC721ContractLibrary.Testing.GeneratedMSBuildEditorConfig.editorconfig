@@ -1,0 +1,10 @@
+is_global = true
+build_property.TargetFramework = net5.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ERC721ContractLibrary.Testing
+build_property.ProjectDir = H:\JuanFran\Documents\Source\Repos\Nethereum.Templates.SmartContracts.OZ-Erc721-Erc1155\ERC721ContractLibrary.Testing\
